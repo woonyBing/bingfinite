@@ -12,8 +12,8 @@ function App() {
       <div className="Header">
           <Navbar className="navbar">
             <Container>
-              <Navbar.Brand id="navbarLogo" href="/">Navbar</Navbar.Brand>
-              <Nav>
+              <Navbar.Brand id="navbarLogo" href="/">Bingfinite</Navbar.Brand>
+              <Nav className="me-auto">
                 <Nav.Link className="navbarCategory" onClick={()=>{navigate('/aboutme')}}>About Me</Nav.Link>
                 <Nav.Link className="navbarCategory" onClick={()=>{navigate('/project')}}>Project</Nav.Link>
                 <Nav.Link className="navbarCategory" onClick={()=>{navigate('/skill')}}>Skill</Nav.Link>
@@ -22,7 +22,14 @@ function App() {
             </Container>
           </Navbar>
           <div className="mainBanner">
-            
+            <div className="mainText">
+              <h1 style={{color:'rgb(73, 132, 232)'}}>Bingfinite :</h1>
+              <p style={{color:'gray'}}>Bing Ye Eun + Infinite</p>
+              <br/>
+              <h4>성장 가능성이 무한한 신입 개발자,</h4>
+              <h4>저는 <b>빙예은</b>입니다.</h4>
+            </div>
+            <button className="mainButton" onClick={()=>{navigate('/project')}}>프로젝트 바로가기</button>
           </div>
       </div>
 
