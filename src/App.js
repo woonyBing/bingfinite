@@ -21,21 +21,23 @@ function App() {
               </Nav>
             </Container>
           </Navbar>
-          <div className="mainBanner">
-            <div className="mainText">
-              <h1 style={{color:'rgb(73, 132, 232)'}}>Bingfinite :</h1>
-              <p style={{color:'gray'}}>Bing Ye Eun + Infinite</p>
-              <br/>
-              <h4>성장 가능성이 무한한 신입 개발자,</h4>
-              <h4>저는 <b>빙예은</b>입니다.</h4>
-            </div>
-            <button className="mainButton" onClick={()=>{navigate('/project')}}>프로젝트 바로가기</button>
-          </div>
+          
       </div>
 
       <Routes>
         <Route path="/" element={
           <div>
+            <div className="mainBanner">
+              <div className="mainText">
+                <h1 style={{color:'rgb(73, 132, 232)'}}>Bingfinite :</h1>
+                <p style={{color:'gray'}}>Bing Ye Eun + Infinite</p>
+                <br/>
+                <h4>성장 가능성이 무한한 신입 개발자,</h4>
+                <h4>저는 <b>빙예은</b>입니다.</h4>
+              </div>
+              <button className="mainButton" onClick={()=>{navigate('/project')}}>프로젝트 바로가기</button>
+            </div>
+
             <div className="AboutMe">
               <h1 className="AboutMeTitle">AboutMe</h1>
             </div>
