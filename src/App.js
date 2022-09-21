@@ -24,7 +24,6 @@ function App() {
               </Nav>
             </Container>
           </Navbar>
-          
       </div>
 
       <Routes>
