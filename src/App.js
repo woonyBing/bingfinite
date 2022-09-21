@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, ProgressBar } from "react-bootstrap";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import AboutMe from "./component/AboutMe/AboutMe.js";
 import Contact from "./component/Contact/Contact.js";
@@ -42,7 +42,7 @@ function App() {
               </div>
               <div><MainAboutMe/></div>
               <div><MainProject/></div>
-              <div><Skill/></div>
+              <div><MainSkill/></div>
               <div className="Footer">
               </div>
             </div>
@@ -81,24 +81,53 @@ function MainProject() {
         <div className="cardBox">
           <div className="cardImg"></div>
           <h3 className="cardName">Bingfinite</h3>
-          <div className="cardContent">포트폴리오를 한눈에 볼 수 있도록 제작한<br/>개인 사이트입니다</div>
+          <div className="cardContent">포트폴리오를 한눈에 볼 수 있도록 제작한 개인 사이트입니다</div>
         </div>
         <div className="cardBox">
           <div className="cardImg"></div>
           <h3 className="cardName">Bear Run</h3>
-          <div className="cardContent">HTML, CSS, JAVA SCRIPT<br/>연습을 위해 만든 미니게임 입니다</div>
+          <div className="cardContent">HTML, CSS, JAVA SCRIPT 연습을 위해 만든 미니게임 입니다</div>
         </div>
         <div className="cardBox">
           <div className="cardImg"></div>
           <h3 className="cardName">Bear Run</h3>
-          <div className="cardContent">HTML, CSS, JAVA SCRIPT<br/>연습을 위해 만든 미니게임 입니다</div>
+          <div className="cardContent">HTML, CSS, JAVA SCRIPT 연습을 위해 만든 미니게임 입니다</div>
         </div>
         <div className="cardBox">
           <div className="cardImg"></div>
           <h3 className="cardName">Bear Run</h3>
-          <div className="cardContent">HTML, CSS, JAVA SCRIPT<br/>연습을 위해 만든 미니게임 입니다</div>
+          <div className="cardContent">HTML, CSS, JAVA SCRIPT 연습을 위해 만든 미니게임 입니다</div>
         </div>
       </div>
+    </div>
+  )
+}
+
+function MainSkill() {
+  return(
+    <div className="Skill">
+        <h1 className="SkillTitle">Skill</h1>
+        <div className='skillType'>
+            <div className="skillIcon"></div>
+            <div style={{width: '80%', margin:'auto'}}>
+                <div>JAVA</div>
+                <ProgressBar variant="info" now={60} />
+            </div>
+        </div>
+        <div className='skillType'>
+            <div className="skillIcon"></div>
+            <div style={{width: '80%', margin:'auto'}}>
+                <div>JAVA SCRIPT</div>
+                <ProgressBar variant="info" now={80} />
+            </div>
+        </div>
+        <div className='skillType'>
+            <div className="skillIcon"></div>
+            <div style={{width: '80%', margin:'auto'}}>
+                <div>REACT</div>
+                <ProgressBar variant="info" now={90} />
+            </div>
+        </div>
     </div>
   )
 }
