@@ -54,7 +54,7 @@
   margin:0px;
   height: 400px;
   overflow: hidden;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 .AboutMeTitle{
   margin-left: 10%;
@@ -82,28 +82,43 @@ li {
 }
 
 .Project {
-  color:white;
   box-sizing : border-box;
   margin:0px;
   height: 600px;
-  background-color: rgb(73, 132, 232);
+  background-color: rgb(248, 248, 248);
   overflow: auto;
 }
 .ProjectTitle {
-  margin-top: 30px;
+  margin-top: 80px;
+  margin-left: 10%;
+  color : rgb(73, 132, 232);
+  float: left;
+}
+.morePj {
+  margin-top: 90px;
+  font-size: 10pt;
+  /* float: right; */
+  text-align: right;
+  margin-right: 5%;
+}
+.mainPjCard {
+  clear: both;
   margin-left: 10%;
 }
 
 .Skill {
-  color:black;
-  text-align: center;
   box-sizing : border-box;
   margin:0px;
   height: 600px;
+  overflow: auto;
 }
 .SkillTitle {
-  margin-top: 30px;
+  color: rgb(73, 132, 232);
+  margin-top: 80px;
+  margin-left: 10%;
 }
+
+
 
 .Footer {
   background-color: rgb(73, 132, 232);

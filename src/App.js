@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, Card } from "react-bootstrap";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import AboutMe from "./component/AboutMe/AboutMe.js";
 import Contact from "./component/Contact/Contact.js";
@@ -41,22 +41,9 @@ function App() {
                 </div>
                 <button className="mainButton" onClick={()=>{navigate('/project')}}>프로젝트 바로가기</button>
               </div>
-              <div className="AboutMe">
-                <h2 className="AboutMeTitle">About Me</h2>
-                <div className="abline"></div>
-                <ul>
-                  <li><b>이름</b> 빙예은</li>
-                  <li><b>생년월일</b> 1995.01.05</li>
-                  <li><b>이메일</b> honeybye@naver.com</li>
-                  <li><b>연락처</b> 010-2024-8903</li>
-                </ul>
-              </div>
-              <div className="Project">
-                <h2 className="ProjectTitle">Project</h2>
-              </div>
-              <div>
-                <Skill/>
-              </div>
+              <div><MainAboutMe/></div>
+              <div><MainProject/></div>
+              <div><Skill/></div>
               <div className="Footer">
               </div>
             </div>
@@ -69,6 +56,43 @@ function App() {
       </div>  
     </div>
   );
+}
+
+function MainAboutMe() {
+  return (
+    <div className="AboutMe">
+      <h2 className="AboutMeTitle">About Me</h2>
+      <div className="abline"></div>
+      <ul>
+        <li><b>이름</b> 빙예은</li>
+        <li><b>생년월일</b> 1995.01.05</li>
+        <li><b>이메일</b> honeybye@naver.com</li>
+        <li><b>연락처</b> 010-2024-8903</li>
+      </ul>
+    </div>
+  )
+}
+
+function MainProject() {
+  return(
+    <div className="Project">
+      <h2 className="ProjectTitle">Project</h2>
+      <div className="morePj">more >></div>
+      <div className="mainPjCard">
+        <Card className="bg-dark text-white">
+          <Card.Img src="holder.js/100px270" alt="Card image" />
+          <Card.ImgOverlay>
+            <Card.Title>Card title</Card.Title>
+            <Card.Text>
+              This is a wider card with supporting text below as a natural lead-in
+              to additional content. This content is a little bit longer.
+            </Card.Text>
+            <Card.Text>Last updated 3 mins ago</Card.Text>
+          </Card.ImgOverlay>
+        </Card>
+      </div>
+    </div>
+  )
 }
 
 export default App;
