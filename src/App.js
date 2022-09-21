@@ -26,38 +26,47 @@ function App() {
           </Navbar>
       </div>
 
-      <Routes>
-        <Route path="/" element={
-          <div>
-            <div className="mainBanner">
-              <div className="mainText">
-                <h1 style={{color:'rgb(73, 132, 232)'}}>Bingfinite :</h1>
-                <p style={{color:'gray'}}>Bing Ye Eun + Infinite</p>
-                <br/>
-                <h4>성장 가능성이 무한한 신입 개발자,</h4>
-                <h4>안녕하세요 <b>빙예은</b>입니다.</h4>
-              </div>
-              <button className="mainButton" onClick={()=>{navigate('/project')}}>프로젝트 바로가기</button>
-            </div>
 
-            <div className="AboutMe">
-              <h1 className="AboutMeTitle">AboutMe</h1>
+      <div className="mainBody">
+        <Routes>
+          <Route path="/" element={
+            <div>
+              <div className="mainBanner">
+                <div className="mainText">
+                  <h1 style={{color:'rgb(73, 132, 232)'}}>Bingfinite :</h1>
+                  <p style={{color:'gray'}}>Bing Ye Eun + Infinite</p>
+                  <br/>
+                  <h4>성장 가능성이 무한한 신입 개발자,</h4>
+                  <h4>안녕하세요 <b>빙예은</b>입니다.</h4>
+                </div>
+                <button className="mainButton" onClick={()=>{navigate('/project')}}>프로젝트 바로가기</button>
+              </div>
+              <div className="AboutMe">
+                <h2 className="AboutMeTitle">AboutMe</h2>
+                <div className="abline"></div>
+                <ul>
+                  <li>이름 빙예은</li>
+                  <li>생년월일 1995.01.05</li>
+                  <li>이메일 honeybye@naver.com</li>
+                  <li>연락처 010-2024-8903</li>
+                </ul>
+              </div>
+              <div className="Project">
+                <h2 className="ProjectTitle">Project</h2>
+              </div>
+              <div>
+                <Skill/>
+              </div>
+              <div className="Footer">
+              </div>
             </div>
-            <div className="Project">
-              <h1 className="ProjectTitle">Project</h1>
-            </div>
-            <div className="Contact">
-              <h1 className="ContactTitle">Contact</h1>
-            </div>
-            <div className="Footer"></div>
-          </div>
-        }></Route>
-        <Route path="/aboutme" element={<AboutMe/>}></Route>
-        <Route path="/project" element={<Project/>}></Route>
-        <Route path="/skill" element={<Skill/>}></Route>
-        <Route path="/contact" element={<Contact/>}></Route>
-      </Routes>
-      
+          }></Route>
+          <Route path="/aboutme" element={<AboutMe/>}></Route>
+          <Route path="/project" element={<Project/>}></Route>
+          <Route path="/skill" element={<Skill/>}></Route>
+          <Route path="/contact" element={<Contact/>}></Route>
+        </Routes>
+      </div>  
     </div>
   );
 }

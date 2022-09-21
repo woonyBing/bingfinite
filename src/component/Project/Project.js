@@ -1,6 +1,10 @@
 function Project() {
     return(
-        <div>Project 페이지 구성하기</div>
+        <div>
+            <div className="Project">
+                <h1 className="ProjectTitle">Project</h1>
+            </div>
+        </div>
     )
 }
 

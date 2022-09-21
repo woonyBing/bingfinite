@@ -3,6 +3,7 @@
   margin:0px;
   padding: 0;
 }
+
 .navbar {
   background-color: none;
   position: fixed;
@@ -30,7 +31,7 @@
 }
 
 .mainText {
-  color:rgb(34, 34, 34);
+  color:rgb(63, 63, 63);
   text-align: center;
   padding: 150px 30px;
 }
@@ -47,28 +48,50 @@
   display: block;
 }
 
-.AboutMe, .Contact {
+.AboutMe{
+  color:black;
+  box-sizing : border-box;
+  margin:0px;
+  height: 500px;
+}
+.AboutMeTitle{
+  margin-top: 50px;
+  margin-left: 10%;
+  color : rgb(73, 132, 232);
+}
+.abline {
+  width: 1px;
+  height: 400px;
+  background-color: rgb(184, 184, 184);
+  margin-left: 30%;
+  float: left;
+}
+ul, li {
+  list-style-type: none;
+  float:left;
+  display: block;
+  margin-right: 15px;
+}
+.Skill {
   color:black;
   text-align: center;
   box-sizing : border-box;
   margin:0px;
   height: 600px;
 }
+.SkillTitle {
+  margin-top: 30px;
+}
 
 .Project {
   color:white;
-  text-align: center;
   box-sizing : border-box;
   margin:0px;
   height: 600px;
   background-color: rgb(73, 132, 232);
 }
 .ProjectTitle {
-  padding-top: 30px;
-}
-
-.AboutMeTitle, .ContactTitle {
-  padding-top: 30px;
+  margin-top: 30px;
 }
 
 .Footer {

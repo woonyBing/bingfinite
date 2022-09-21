@@ -1,6 +1,10 @@
 function Skill() {
     return(
-        <div>Skill 페이지 구성하기</div>
+        <div>
+            <div className="Skill">
+                <h1 className="SkillTitle">Skill</h1>
+            </div>
+        </div>
     )
 }
 
