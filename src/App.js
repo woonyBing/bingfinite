@@ -44,6 +44,19 @@ function App() {
               <div><MainProject/></div>
               <div><MainSkill/></div>
               <div className="Footer">
+                <div className="ftLogo">
+                  <h3>Bingfinite :</h3>
+                  <div style={{color:'white'}}>Bing Ye Eun + Infinite</div>
+                </div>
+                <div className="ftSns">
+                  <div className="ftSnsInsta">
+                    <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" width="30px" style={{color:'blue'}}/>
+                  </div>
+                  <div className="ftSnsTalk"></div>
+                </div>
+                <div className="ftCopyright">
+                Copyright 2022. Bing Ye Eun. All rights reserved.
+                </div>
               </div>
             </div>
           }></Route>
@@ -111,7 +124,7 @@ function MainSkill() {
             <div className="skillIcon"></div>
             <div style={{width: '80%', margin:'auto'}}>
                 <div>JAVA</div>
-                <ProgressBar variant="info" now={60} />
+                <ProgressBar variant="info" now={50} />
             </div>
         </div>
         <div className='skillType'>
