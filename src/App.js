@@ -1,12 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Navbar, Container, Nav, Card } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import AboutMe from "./component/AboutMe/AboutMe.js";
 import Contact from "./component/Contact/Contact.js";
 import Project from "./component/Project/Project.js";
 import Skill from "./component/Skill/Skill.js";
-
 function App() {
   let navigate = useNavigate();
 
@@ -77,19 +76,28 @@ function MainProject() {
   return(
     <div className="Project">
       <h2 className="ProjectTitle">Project</h2>
-      <div className="morePj">more >></div>
+      <div className="morePj">more</div>
       <div className="mainPjCard">
-        <Card className="bg-dark text-white">
-          <Card.Img src="holder.js/100px270" alt="Card image" />
-          <Card.ImgOverlay>
-            <Card.Title>Card title</Card.Title>
-            <Card.Text>
-              This is a wider card with supporting text below as a natural lead-in
-              to additional content. This content is a little bit longer.
-            </Card.Text>
-            <Card.Text>Last updated 3 mins ago</Card.Text>
-          </Card.ImgOverlay>
-        </Card>
+        <div className="cardBox">
+          <div className="cardImg"></div>
+          <h3 className="cardName">Bingfinite</h3>
+          <div className="cardContent">포트폴리오를 한눈에 볼 수 있도록 제작한<br/>개인 사이트입니다</div>
+        </div>
+        <div className="cardBox">
+          <div className="cardImg"></div>
+          <h3 className="cardName">Bear Run</h3>
+          <div className="cardContent">HTML, CSS, JAVA SCRIPT<br/>연습을 위해 만든 미니게임 입니다</div>
+        </div>
+        <div className="cardBox">
+          <div className="cardImg"></div>
+          <h3 className="cardName">Bear Run</h3>
+          <div className="cardContent">HTML, CSS, JAVA SCRIPT<br/>연습을 위해 만든 미니게임 입니다</div>
+        </div>
+        <div className="cardBox">
+          <div className="cardImg"></div>
+          <h3 className="cardName">Bear Run</h3>
+          <div className="cardContent">HTML, CSS, JAVA SCRIPT<br/>연습을 위해 만든 미니게임 입니다</div>
+        </div>
       </div>
     </div>
   )

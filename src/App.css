@@ -84,7 +84,7 @@ li {
 .Project {
   box-sizing : border-box;
   margin:0px;
-  height: 600px;
+  height: auto;
   background-color: rgb(248, 248, 248);
   overflow: auto;
 }
@@ -97,14 +97,33 @@ li {
 .morePj {
   margin-top: 90px;
   font-size: 10pt;
-  /* float: right; */
   text-align: right;
   margin-right: 5%;
 }
 .mainPjCard {
   clear: both;
   margin-left: 10%;
+  margin-top: 20px;
+  margin-bottom: 80px;
 }
+.cardBox {
+  width: 45%;
+  margin-right: 10px;
+  margin-bottom: 80px;
+  float: left;
+}
+.cardImg {
+  height: 400px;
+  background-color: black;
+}
+.cardName {
+  margin-top: 20px;
+}
+.cardContent {
+  margin-top: 5px;
+}
+
+
 
 .Skill {
   box-sizing : border-box;
