@@ -42,13 +42,13 @@ function App() {
                 <button className="mainButton" onClick={()=>{navigate('/project')}}>프로젝트 바로가기</button>
               </div>
               <div className="AboutMe">
-                <h2 className="AboutMeTitle">AboutMe</h2>
+                <h2 className="AboutMeTitle">About Me</h2>
                 <div className="abline"></div>
                 <ul>
-                  <li>이름 빙예은</li>
-                  <li>생년월일 1995.01.05</li>
-                  <li>이메일 honeybye@naver.com</li>
-                  <li>연락처 010-2024-8903</li>
+                  <li><b>이름</b> 빙예은</li>
+                  <li><b>생년월일</b> 1995.01.05</li>
+                  <li><b>이메일</b> honeybye@naver.com</li>
+                  <li><b>연락처</b> 010-2024-8903</li>
                 </ul>
               </div>
               <div className="Project">
