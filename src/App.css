@@ -7,7 +7,7 @@
 
 .navbar {
   background-color: white;
-  position: fixed;
+  /* position: fixed; */
   margin:0 auto;
   left:0;
   right:0;
@@ -113,8 +113,9 @@ li {
   float: left;
 }
 .cardImg {
+  width: 100%;
   height: 400px;
-  /* background-color: black; */
+  background-color: black;
 }
 .cardName {
   margin-top: 20px;
@@ -190,4 +191,36 @@ li {
   text-align: right;
   margin-right:5%;
   clear: both;
+}
+
+
+.AboutHeader {
+  text-align: center;
+}
+.AboutTop{
+  margin-top: 80px;
+}
+.abTab{
+  width: 120px;
+  height: 35px;
+  font-size: 16px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  padding:5px;
+  display: inline-block;
+  margin: 10px;
+}
+.AboutBody{
+  clear: both;
+  margin-top: 59px;
+}
+.info {
+  background-color: rgb(248, 248, 248);
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.career {
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
