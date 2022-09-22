@@ -6,7 +6,7 @@
 }
 
 .navbar {
-  background-color: none;
+  background-color: white;
   position: fixed;
   margin:0 auto;
   left:0;
@@ -151,7 +151,8 @@ li {
 
 
 .Footer {
-  background-color: rgb(73, 132, 232);
+  /* background-color: rgb(73, 132, 232); */
+  background-color: black;
   height: 300px;
   overflow: hidden;
 }

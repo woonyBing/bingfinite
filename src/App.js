@@ -6,6 +6,7 @@ import AboutMe from "./component/AboutMe/AboutMe.js";
 import Contact from "./component/Contact/Contact.js";
 import Project from "./component/Project/Project.js";
 import Skill from "./component/Skill/Skill.js";
+
 function App() {
   let navigate = useNavigate();
 
@@ -30,44 +31,60 @@ function App() {
         <Routes>
           <Route path="/" element={
             <div>
-              <div className="mainBanner">
-                <div className="mainText">
-                  <h1 style={{color:'rgb(73, 132, 232)'}}>Bingfinite :</h1>
-                  <p style={{color:'gray'}}>Bing Ye Eun + Infinite</p>
-                  <br/>
-                  <h4>성장 가능성이 무한한 신입 개발자,</h4>
-                  <h4>안녕하세요 <b>빙예은</b>입니다.</h4>
-                </div>
-                <button className="mainButton" onClick={()=>{navigate('/project')}}>프로젝트 바로가기</button>
-              </div>
+              <div><MainBanner/></div>
               <div><MainAboutMe/></div>
               <div><MainProject/></div>
               <div><MainSkill/></div>
-              <div className="Footer">
-                <div className="ftLogo">
-                  <h3>Bingfinite :</h3>
-                  <div style={{color:'white'}}>Bing Ye Eun + Infinite</div>
-                </div>
-                <div className="ftSns">
-                  <div className="ftSnsInsta">
-                    <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" width="30px" style={{color:'blue'}}/>
-                  </div>
-                  <div className="ftSnsTalk"></div>
-                </div>
-                <div className="ftCopyright">
-                Copyright 2022. Bing Ye Eun. All rights reserved.
-                </div>
-              </div>
+              <div><Footer/></div>
             </div>
           }></Route>
           <Route path="/aboutme" element={<AboutMe/>}></Route>
           <Route path="/project" element={<Project/>}></Route>
           <Route path="/skill" element={<Skill/>}></Route>
           <Route path="/contact" element={<Contact/>}></Route>
+          <Route path="*" element={<div>404 not found</div>}></Route>
         </Routes>
-      </div>  
+      </div>
     </div>
   );
+}
+
+function Footer(){
+  return(
+    <div className="Footer">
+      <div className="ftLogo">
+        <h3>Bingfinite :</h3>
+        <div style={{color:'white'}}>Bing Ye Eun + Infinite</div>
+      </div>
+      <div className="ftSns">
+        <div className="ftSnsInsta">
+        <img src={process.env.PUBLIC_URL + "images/icon_insta.png"} width="30px"/>
+        </div>
+        <div className="ftSnsTalk">
+        <img src={process.env.PUBLIC_URL + "images/icon_kakao.png"} width="30px"/>
+        </div>
+      </div>
+      <div className="ftCopyright">
+      Copyright 2022. Bing Ye Eun. All rights reserved.
+      </div>
+    </div>
+  )
+}
+
+function MainBanner() {
+  let navigate = useNavigate();
+  return(
+    <div className="mainBanner">
+      <div className="mainText">
+        <h1 style={{color:'rgb(73, 132, 232)'}}>Bingfinite :</h1>
+        <p style={{color:'gray'}}>Bing Ye Eun + Infinite</p>
+        <br/>
+        <h4>성장 가능성이 무한한 신입 개발자,</h4>
+        <h4>안녕하세요 <b>빙예은</b>입니다.</h4>
+      </div>
+      <button className="mainButton" onClick={()=>{navigate('/project')}}>프로젝트 바로가기</button>
+    </div>
+  )
 }
 
 function MainAboutMe() {
