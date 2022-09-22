@@ -20,6 +20,7 @@ function Project() {
         <div>
             <div className="mainPjCard">
                 <div className="cardBox">
+                    {/* 맵 돌리기 */}
                     <div className="cardImg">
                         <img src={process.env.PUBLIC_URL + pjList[0].imgPath} width='100%'/>
                     </div>
