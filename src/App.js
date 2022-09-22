@@ -33,7 +33,7 @@ function App() {
               <div className="Project" style={{backgroundColor: 'rgb(248, 248, 248)'}}>
                   <h2 className="ProjectTitle">Project</h2>
                   <div className="morePj">more</div>
-                <Project/>
+                  <Project/>
               </div>
               <div className="Skill">
                 <h1 className="SkillTitle">Skill</h1>
@@ -42,7 +42,12 @@ function App() {
             </div>
           }></Route>
           <Route path="/aboutme" element={<AboutMe/>}></Route>
-          <Route path="/project" element={<Project/>}></Route>
+          <Route path="/project" element={
+            <div style={{height:'auto', marginTop:'80px'}}>
+              <h3 style={{textAlign:'center'}}>Project</h3>
+              <Project/>
+            </div>
+          }></Route>
           <Route path="*" element={<div>404 not found</div>}></Route>
         </Routes>
         <div><Footer/></div>

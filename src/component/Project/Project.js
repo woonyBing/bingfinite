@@ -17,21 +17,21 @@ function Project() {
     ]);
 
     return(
-        <div style={{paddingTop:'20px'}}>
+        <div>
             <div className="mainPjCard">
                 <div className="cardBox">
-                <div className="cardImg">
-                    <img src={process.env.PUBLIC_URL + pjList[0].imgPath} width='100%'/>
-                </div>
-                <h3 className="cardName">{pjList[0].name}</h3>
-                <div className="cardContent">{pjList[0].content}</div>
+                    <div className="cardImg">
+                        <img src={process.env.PUBLIC_URL + pjList[0].imgPath} width='100%'/>
+                    </div>
+                    <h3 className="cardName">{pjList[0].name}</h3>
+                    <div className="cardContent">{pjList[0].content}</div>
                 </div>
                 <div className="cardBox">
-                <div className="cardImg">
-                    <img src={process.env.PUBLIC_URL + pjList[1].imgPath} width='100%'/>
-                </div>
-                <h3 className="cardName">{pjList[1].name}</h3>
-                <div className="cardContent">{pjList[1].content}</div>
+                    <div className="cardImg">
+                        <img src={process.env.PUBLIC_URL + pjList[1].imgPath} width='100%'/>
+                    </div>
+                    <h3 className="cardName">{pjList[1].name}</h3>
+                    <div className="cardContent">{pjList[1].content}</div>
                 </div>
             </div>
         </div>
