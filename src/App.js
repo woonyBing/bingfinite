@@ -6,6 +6,7 @@ import AboutMe from "./component/AboutMe/AboutMe.js";
 import Contact from "./component/Contact/Contact.js";
 import Project from "./component/Project/Project.js";
 import Skill from "./component/Skill/Skill.js";
+import { useState, useEffect } from "react";
 
 function App() {
   let navigate = useNavigate();
@@ -103,30 +104,35 @@ function MainAboutMe() {
 }
 
 function MainProject() {
+  let [pjList, setpjList] = useState([
+    {
+      id : 'pj001',
+      name : 'Bingfinite',
+      content : '포트폴리오를 한눈에 볼 수 있도록 제작한 개인 사이트입니다',
+      imgPath : 'images/pj_bingfinite.png'
+    },
+    {
+      id : 'pj002',
+      name : 'Bear Run',
+      content : 'HTML, CSS, JAVA SCRIPT 연습을 위해 만든 미니게임 입니다',
+      imgPath : ''
+    },
+  ]);
+
   return(
     <div className="Project">
       <h2 className="ProjectTitle">Project</h2>
       <div className="morePj">more</div>
       <div className="mainPjCard">
         <div className="cardBox">
-          <div className="cardImg"></div>
-          <h3 className="cardName">Bingfinite</h3>
-          <div className="cardContent">포트폴리오를 한눈에 볼 수 있도록 제작한 개인 사이트입니다</div>
+          <div className="cardImg" src={process.env.PUBLIC_URL + pjList[0].imgPath}></div>
+          <h3 className="cardName">{pjList[0].name}</h3>
+          <div className="cardContent">{pjList[0].content}</div>
         </div>
         <div className="cardBox">
           <div className="cardImg"></div>
-          <h3 className="cardName">Bear Run</h3>
-          <div className="cardContent">HTML, CSS, JAVA SCRIPT 연습을 위해 만든 미니게임 입니다</div>
-        </div>
-        <div className="cardBox">
-          <div className="cardImg"></div>
-          <h3 className="cardName">Bear Run</h3>
-          <div className="cardContent">HTML, CSS, JAVA SCRIPT 연습을 위해 만든 미니게임 입니다</div>
-        </div>
-        <div className="cardBox">
-          <div className="cardImg"></div>
-          <h3 className="cardName">Bear Run</h3>
-          <div className="cardContent">HTML, CSS, JAVA SCRIPT 연습을 위해 만든 미니게임 입니다</div>
+          <h3 className="cardName">{pjList[1].name}</h3>
+          <div className="cardContent">{pjList[1].content}</div>
         </div>
       </div>
     </div>

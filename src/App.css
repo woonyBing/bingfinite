@@ -114,7 +114,7 @@ li {
 }
 .cardImg {
   height: 400px;
-  background-color: black;
+  /* background-color: black; */
 }
 .cardName {
   margin-top: 20px;
