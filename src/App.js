@@ -12,51 +12,39 @@ function App() {
 
   return (
     <div>
-      <div className="Header">
-          <Navbar className="navbar">
-            <Container>
-              <Navbar.Brand id="navbarLogo" href="/">Bingfinite</Navbar.Brand>
-              <Nav className="me-auto">
-                <Nav.Link className="navbarCategory" onClick={()=>{navigate('/aboutme')}}>About Me</Nav.Link>
-                <Nav.Link className="navbarCategory" onClick={()=>{navigate('/project')}}>Project</Nav.Link>
-              </Nav>
-            </Container>
-          </Navbar>
-      </div>
-
       <div className="mainBody">
         <Routes>
           <Route path="/" element={
             <div>
-              <div><MainBanner/></div>
-              <div><MainAboutMe/></div>
-              <div className="Project" style={{backgroundColor: 'rgb(248, 248, 248)'}}>
-                  <h2 className="ProjectTitle">Project</h2>
-                  <div className="morePj">more</div>
-                  <Project/>
-              </div>
-              <div className="Skill">
-                <h1 className="SkillTitle">Skill</h1>
-                <Skill/>
-              </div>
+              <Home/>
             </div>
           }></Route>
-          <Route path="/aboutme" element={<AboutMe/>}></Route>
+          <Route path="/aboutme" element={
+            <div>
+              <MenuBar/>
+              <AboutMe/>
+              <Footer/>
+            </div>
+          }></Route>
           <Route path="/project" element={
-            <div style={{height:'auto', marginTop:'80px'}}>
-              <h3 style={{textAlign:'center'}}>Project</h3>
-              <Project/>
+            <div>
+              <MenuBar/>
+              <div style={{height:'auto', marginTop:'80px'}}>
+                <h3 style={{textAlign:'center'}}>Project</h3>
+                <Project/>
+                <Footer/>
+              </div>
             </div>
           }></Route>
           <Route path="*" element={<div>404 not found</div>}></Route>
         </Routes>
-        <div><Footer/></div>
       </div>
     </div>
   );
 }
 
-function MainBanner() {
+
+function Home() {
   let navigate = useNavigate();
   return(
     <div className="mainBanner">
@@ -68,6 +56,23 @@ function MainBanner() {
         <h4>안녕하세요 <b>빙예은</b>입니다.</h4>
       </div>
       <button className="mainButton" onClick={()=>{navigate('/project')}}>프로젝트 바로가기</button>
+    </div>
+  )
+}
+
+function MenuBar() {
+  let navigate = useNavigate();
+  return(
+    <div className="Header">
+      <Navbar className="navbar">
+        <Container>
+          <Navbar.Brand id="navbarLogo" href="/">Bingfinite</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link className="navbarCategory" onClick={()=>{navigate('/aboutme')}}>About Me</Nav.Link>
+            <Nav.Link className="navbarCategory" onClick={()=>{navigate('/project')}}>Project</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
     </div>
   )
 }
