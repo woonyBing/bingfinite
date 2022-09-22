@@ -14,27 +14,43 @@ function Project() {
             content : 'HTML, CSS, JAVA SCRIPT 연습을 위해 만든 미니게임 입니다',
             imgPath : 'images/pj_bearrun.png'
         },
+        {
+            id : 'pj003',
+            name : 'Todo List',
+            content : '강의 중 진행한 TodoList를 클론코딩 했습니다',
+            imgPath : ''
+        },
+        {
+            id : 'pj004',
+            name : 'Market',
+            content : '강의 중 진행한 Market 클론코딩 했습니다',
+            imgPath : ''
+        },
     ]);
 
     return(
         <div>
             <div className="mainPjCard">
-                <div className="cardBox">
-                    {/* 맵 돌리기 */}
-                    <div className="cardImg">
-                        <img src={process.env.PUBLIC_URL + pjList[0].imgPath} width='100%'/>
-                    </div>
-                    <h3 className="cardName">{pjList[0].name}</h3>
-                    <div className="cardContent">{pjList[0].content}</div>
-                </div>
-                <div className="cardBox">
-                    <div className="cardImg">
-                        <img src={process.env.PUBLIC_URL + pjList[1].imgPath} width='100%'/>
-                    </div>
-                    <h3 className="cardName">{pjList[1].name}</h3>
-                    <div className="cardContent">{pjList[1].content}</div>
-                </div>
+                {
+                    pjList.map((projectList, i)=>{
+                        return(
+                            <CardList key={projectList.id} projectList={projectList} i={i}/>
+                        )
+                    })
+                }
             </div>
+        </div>
+    )
+}
+
+function CardList({projectList, i}) {
+    return(
+        <div className="cardBox">
+            <div className="cardImg">
+                <img src={process.env.PUBLIC_URL + projectList.imgPath} width='100%'/>
+            </div>
+            <h3 className="cardName">{projectList.name}</h3>
+            <div className="cardContent">{projectList.content}</div>
         </div>
     )
 }
