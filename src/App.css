@@ -112,10 +112,12 @@ li {
   margin-bottom: 80px;
   float: left;
 }
-.cardImg {
+.cardImg > img {
   width: 100%;
   height: 400px;
-  background-color: black;
+  box-shadow: 5px 5px 10px -10px rgb(8, 8, 36) ;
+  object-fit:cover;
+
 }
 .cardName {
   margin-top: 20px;
@@ -128,7 +130,6 @@ li {
 
 .Skill {
   box-sizing : border-box;
-  margin:0px;
   margin-bottom: 100px;
   height: auto;
 }
@@ -139,10 +140,11 @@ li {
 }
 .skillType {
   margin-top: 20px;
+  /* border: 1px solid red; */
 }
 .skillIcon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: black;
   margin-left: 10%;
   margin-right: 15px;
@@ -152,8 +154,8 @@ li {
 
 
 .Footer {
-  /* background-color: rgb(73, 132, 232); */
-  background-color: black;
+  background-color: rgb(73, 132, 232);
+  /* background-color: black; */
   height: 300px;
   overflow: hidden;
 }
@@ -173,16 +175,21 @@ li {
   width:40px;
   height:40px;
   border-radius: 10px;
+  float:right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
 }
 .ftSnsInsta {
-  /* background-image: ; */
   background-color: white;
   width:40px;
   height: 40px;
   border-radius: 10px;
-  margin-left: 50px;
-  float: left;
-  padding:5px
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ftCopyright{
@@ -223,4 +230,9 @@ li {
 .career {
   margin-top: 80px;
   margin-bottom: 80px;
+}
+.careerTable{
+  width: 80%;
+  margin-top: 30px;
+  margin:auto;
 }

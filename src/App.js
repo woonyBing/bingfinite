@@ -3,9 +3,8 @@ import "./App.css";
 import { Navbar, Container, Nav, ProgressBar } from "react-bootstrap";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import AboutMe from "./component/AboutMe/AboutMe.js";
-import Contact from "./component/Contact/Contact.js";
 import Project from "./component/Project/Project.js";
-import Skill from "./component/Skill/Skill.js";
+import Skill from "./component/AboutMe/Skill";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -20,13 +19,10 @@ function App() {
               <Nav className="me-auto">
                 <Nav.Link className="navbarCategory" onClick={()=>{navigate('/aboutme')}}>About Me</Nav.Link>
                 <Nav.Link className="navbarCategory" onClick={()=>{navigate('/project')}}>Project</Nav.Link>
-                <Nav.Link className="navbarCategory" onClick={()=>{navigate('/skill')}}>Skill</Nav.Link>
-                <Nav.Link className="navbarCategory" onClick={()=>{navigate('/contact')}}>Contact</Nav.Link>
               </Nav>
             </Container>
           </Navbar>
       </div>
-
 
       <div className="mainBody">
         <Routes>
@@ -35,41 +31,20 @@ function App() {
               <div><MainBanner/></div>
               <div><MainAboutMe/></div>
               <div><MainProject/></div>
-              <div><MainSkill/></div>
-              <div><Footer/></div>
+              <div className="Skill">
+                <h1 className="SkillTitle">Skill</h1>
+                <Skill/>
+              </div>
             </div>
           }></Route>
           <Route path="/aboutme" element={<AboutMe/>}></Route>
           <Route path="/project" element={<Project/>}></Route>
-          <Route path="/skill" element={<Skill/>}></Route>
-          <Route path="/contact" element={<Contact/>}></Route>
           <Route path="*" element={<div>404 not found</div>}></Route>
         </Routes>
+        <div><Footer/></div>
       </div>
     </div>
   );
-}
-
-function Footer(){
-  return(
-    <div className="Footer">
-      <div className="ftLogo">
-        <h3>Bingfinite :</h3>
-        <div style={{color:'white'}}>Bing Ye Eun + Infinite</div>
-      </div>
-      <div className="ftSns">
-        <div className="ftSnsInsta">
-        <img src={process.env.PUBLIC_URL + "images/icon_insta.png"} width="30px"/>
-        </div>
-        <div className="ftSnsTalk">
-        <img src={process.env.PUBLIC_URL + "images/icon_kakao.png"} width="30px"/>
-        </div>
-      </div>
-      <div className="ftCopyright">
-      Copyright 2022. Bing Ye Eun. All rights reserved.
-      </div>
-    </div>
-  )
 }
 
 function MainBanner() {
@@ -115,7 +90,7 @@ function MainProject() {
       id : 'pj002',
       name : 'Bear Run',
       content : 'HTML, CSS, JAVA SCRIPT 연습을 위해 만든 미니게임 입니다',
-      imgPath : ''
+      imgPath : 'images/pj_bearrun.png'
     },
   ]);
 
@@ -125,12 +100,16 @@ function MainProject() {
       <div className="morePj">more</div>
       <div className="mainPjCard">
         <div className="cardBox">
-          <div className="cardImg" src={process.env.PUBLIC_URL + pjList[0].imgPath}></div>
+          <div className="cardImg">
+            <img src={process.env.PUBLIC_URL + pjList[0].imgPath} width='100%'/>
+          </div>
           <h3 className="cardName">{pjList[0].name}</h3>
           <div className="cardContent">{pjList[0].content}</div>
         </div>
         <div className="cardBox">
-          <div className="cardImg"></div>
+          <div className="cardImg">
+            <img src={process.env.PUBLIC_URL + pjList[1].imgPath} width='100%'/>
+          </div>
           <h3 className="cardName">{pjList[1].name}</h3>
           <div className="cardContent">{pjList[1].content}</div>
         </div>
@@ -139,33 +118,27 @@ function MainProject() {
   )
 }
 
-function MainSkill() {
+function Footer(){
   return(
-    <div className="Skill">
-        <h1 className="SkillTitle">Skill</h1>
-        <div className='skillType'>
-            <div className="skillIcon"></div>
-            <div style={{width: '80%', margin:'auto'}}>
-                <div>JAVA</div>
-                <ProgressBar variant="info" now={50} />
-            </div>
+    <div className="Footer">
+      <div className="ftLogo">
+        <h3>Bingfinite :</h3>
+        <div style={{color:'white'}}>Bing Ye Eun + Infinite</div>
+      </div>
+      <div className="ftSns">
+        <div className="ftSnsInsta">
+        <img src={process.env.PUBLIC_URL + "images/icon_insta.png"} width="25px"/>
         </div>
-        <div className='skillType'>
-            <div className="skillIcon"></div>
-            <div style={{width: '80%', margin:'auto'}}>
-                <div>JAVA SCRIPT</div>
-                <ProgressBar variant="info" now={80} />
-            </div>
+        <div className="ftSnsTalk">
+        <img src={process.env.PUBLIC_URL + "images/icon_kakao.png"} width="25px"/>
         </div>
-        <div className='skillType'>
-            <div className="skillIcon"></div>
-            <div style={{width: '80%', margin:'auto'}}>
-                <div>REACT</div>
-                <ProgressBar variant="info" now={90} />
-            </div>
-        </div>
+      </div>
+      <div className="ftCopyright">
+      Copyright 2022. Bing Ye Eun. All rights reserved.
+      </div>
     </div>
   )
 }
+
 
 export default App;
