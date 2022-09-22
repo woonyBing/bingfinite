@@ -34,7 +34,7 @@ function Project() {
                 {
                     pjList.map((projectList, i)=>{
                         return(
-                            <CardList key={projectList.id} projectList={projectList} i={i}/>
+                            <CardCollection key={projectList.id} projectList={projectList} i={i}/>
                         )
                     })
                 }
@@ -43,7 +43,7 @@ function Project() {
     )
 }
 
-function CardList({projectList, i}) {
+function CardCollection({projectList, i}) {
     return(
         <div className="cardBox">
             <div className="cardImg">
