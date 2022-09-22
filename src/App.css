@@ -101,9 +101,9 @@ li {
   margin-right: 10%;
 }
 .mainPjCard {
-  clear: both;
+  /* clear: both; */
+  height: auto;
   margin-left: 10%;
-  margin-top: 20px;
   margin-bottom: 80px;
 }
 .cardBox {
