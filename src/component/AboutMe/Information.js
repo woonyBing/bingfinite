@@ -13,7 +13,7 @@ function Information() {
             <div style={{marginTop:'20px'}}>
                 <Container>
                     <Card style={{ width: '70%', margin: "0 auto" }}>
-                        <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+                        <Card.Img variant="top" src={process.env.PUBLIC_URL + "images/yeeun-1.jpg"} />
                         <Card.Body>
                             <Card.Title>빙예은(氷藝殷)</Card.Title>
                             <ListGroup.Item>Bing Ye Eun</ListGroup.Item>

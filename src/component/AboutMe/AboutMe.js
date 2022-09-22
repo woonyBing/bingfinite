@@ -25,8 +25,10 @@ function AboutMe() {
                     <div  className="contactContainer">
                     <div className="contactButton">
                         <img src={process.env.PUBLIC_URL + 'images/email.png'}/>E-mail</div>
-                    <div className="contactButton"><img src={process.env.PUBLIC_URL + 'images/call.png'}/>Call</div>
-                    <div className="contactButton"><img src={process.env.PUBLIC_URL + 'images/kakao.png'}/>KaKao Talk</div>
+                    <div className="contactButton">
+                        <img src={process.env.PUBLIC_URL + 'images/call.png'}/>Call</div>
+                    <div className="contactButton">
+                        <img src={process.env.PUBLIC_URL + 'images/kakao.png'}/>KaKao Talk</div>
                     </div>
                 </div>
             </div>
