@@ -47,15 +47,16 @@ function App() {
 function Home() {
   let navigate = useNavigate();
   return(
-    <div className="mainBanner">
-      <div className="mainText">
+    <div className="Home">
         <h1 style={{color:'rgb(73, 132, 232)'}}>Bingfinite :</h1>
         <p style={{color:'gray'}}>Bing Ye Eun + Infinite</p>
         <br/>
         <h4>성장 가능성이 무한한 신입 개발자,</h4>
         <h4>안녕하세요 <b>빙예은</b>입니다.</h4>
-      </div>
-      <button className="mainButton" onClick={()=>{navigate('/project')}}>프로젝트 바로가기</button>
+        <div>
+          <div className="mainButton" onClick={()=>{navigate('/aboutme')}}>About Me</div>
+          <div className="mainButton" onClick={()=>{navigate('/project')}}>Project</div>
+        </div>
     </div>
   )
 }
@@ -68,26 +69,12 @@ function MenuBar() {
         <Container>
           <Navbar.Brand id="navbarLogo" href="/">Bingfinite</Navbar.Brand>
           <Nav className="me-auto">
+            <Nav.Link className="navbarCategory" onClick={()=>{navigate('/')}}>Home</Nav.Link>
             <Nav.Link className="navbarCategory" onClick={()=>{navigate('/aboutme')}}>About Me</Nav.Link>
             <Nav.Link className="navbarCategory" onClick={()=>{navigate('/project')}}>Project</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
-    </div>
-  )
-}
-
-function MainAboutMe() {
-  return (
-    <div className="AboutMe">
-      <h2 className="AboutMeTitle">About Me</h2>
-      <div className="abline"></div>
-      <ul>
-        <li><b>이름</b> 빙예은</li>
-        <li><b>생년월일</b> 1995.01.05</li>
-        <li><b>이메일</b> honeybye@naver.com</li>
-        <li><b>연락처</b> 010-2024-8903</li>
-      </ul>
     </div>
   )
 }
@@ -114,6 +101,5 @@ function Footer(){
     </div>
   )
 }
-
 
 export default App;
