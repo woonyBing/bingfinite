@@ -15,25 +15,37 @@ function App() {
         id : 'pj001',
         name : 'Bingfinite',
         content : '포트폴리오를 한눈에 볼 수 있도록 제작한 개인 사이트입니다',
-        imgPath : 'images/pj_bingfinite.png'
+        mainImgPath : '/images/pj_bingfinite.png',
+        detailThumb : ['/images/bingfinite_main.jpg', '/images/bingfinite_m.jpg'],
+        detailComment : '이 프로젝트에 대한 설명',
+        detailImgPath : ['/images/bingfinite_main.jpg', '/images/bingfinite_aboutme.jpg', '/images/bingfinite_project.jpg']
     },
     {
         id : 'pj002',
         name : 'Bear Run',
         content : 'HTML, CSS, JAVA SCRIPT 연습을 위해 만든 미니게임 입니다',
-        imgPath : 'images/pj_bearrun.png'
+        mainImgPath : '/images/pj_bearrun.png',
+        detailThumb : ['경로1', '경로2'],
+        detailComment : '이 프로젝트에 대한 설명',
+        detailImgPath : ['경로1', '경로2', '경로3', '경로4']
     },
     {
         id : 'pj003',
         name : 'Todo List',
         content : '강의 중 진행한 TodoList를 클론코딩 했습니다',
-        imgPath : ''
+        mainImgPath : '',
+        detailThumb : ['경로1', '경로2'],
+        detailComment : '이 프로젝트에 대한 설명',
+        detailImgPath : ['경로1', '경로2', '경로3', '경로4']
     },
     {
         id : 'pj004',
         name : 'Market',
         content : '강의 중 진행한 Market 클론코딩 했습니다',
-        imgPath : ''
+        mainImgPath : '',
+        detailThumb : ['경로1', '경로2'],
+        detailComment : '이 프로젝트에 대한 설명',
+        detailImgPath : ['경로1', '경로2', '경로3', '경로4']
     },
   ]);
 
@@ -123,10 +135,10 @@ function Footer(){
       </div>
       <div className="ftSns">
         <div className="ftSnsInsta">
-        <img src={process.env.PUBLIC_URL + "images/icon_insta.png"} width="25px"/>
+        <img src={process.env.PUBLIC_URL + "/images/icon_insta.png"} width="25px"/>
         </div>
         <div className="ftSnsTalk">
-        <img src={process.env.PUBLIC_URL + "images/icon_kakao.png"} width="25px"/>
+        <img src={process.env.PUBLIC_URL + "/images/icon_kakao.png"} width="25px"/>
         </div>
       </div>
       <div className="ftCopyright">

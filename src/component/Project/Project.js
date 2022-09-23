@@ -28,7 +28,7 @@ function CardCollection({projectList}) {
             // console.log('/' + projectList.id)
             navigate('/project/' + projectList.id)}}>
             <div className="cardImg">
-                <img src={process.env.PUBLIC_URL + projectList.imgPath} width='100%'/>
+                <img src={process.env.PUBLIC_URL + projectList.mainImgPath} width='100%'/>
             </div>
             <h3 className="cardName">{projectList.name}</h3>
             <div className="cardContent">{projectList.content}</div>
