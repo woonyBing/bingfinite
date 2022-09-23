@@ -1,8 +1,11 @@
 import Skill from "./Skill.js";
 import Information from "./Information.js";
 import Career from "./Career.js";
+import {useNavigate} from "react-router-dom"
 
 function AboutMe() {
+    let navigate = useNavigate();
+
     return(
         <div className="AboutHeader">
             <div className="AboutTop">
@@ -14,7 +17,7 @@ function AboutMe() {
                 <div className="abTab">Contact</div>
             </div>
             <div className="AboutBody">
-                <Information/>
+                <Information id="Information"/>
                 <Career/>
                 <div className="Skill" style={{backgroundColor:'rgb(248, 248, 248)', paddingTop:'80px', paddingBottom:'80px'}}>
                     <h5 style={{color:'rgb(73, 132, 232)'}}>Skill</h5>
