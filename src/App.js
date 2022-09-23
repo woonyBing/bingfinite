@@ -6,8 +6,37 @@ import AboutMe from "./component/AboutMe/AboutMe.js";
 import Project from "./component/Project/Project.js";
 import Skill from "./component/AboutMe/Skill";
 import { useState, useEffect } from "react";
+import ProjecDetail from './component/Project/ProjectDetail.js';
 
 function App() {
+  
+  let [pjList, setpjList] = useState([
+    {
+        id : 'pj001',
+        name : 'Bingfinite',
+        content : '포트폴리오를 한눈에 볼 수 있도록 제작한 개인 사이트입니다',
+        imgPath : 'images/pj_bingfinite.png'
+    },
+    {
+        id : 'pj002',
+        name : 'Bear Run',
+        content : 'HTML, CSS, JAVA SCRIPT 연습을 위해 만든 미니게임 입니다',
+        imgPath : 'images/pj_bearrun.png'
+    },
+    {
+        id : 'pj003',
+        name : 'Todo List',
+        content : '강의 중 진행한 TodoList를 클론코딩 했습니다',
+        imgPath : ''
+    },
+    {
+        id : 'pj004',
+        name : 'Market',
+        content : '강의 중 진행한 Market 클론코딩 했습니다',
+        imgPath : ''
+    },
+  ]);
+
   let navigate = useNavigate();
 
   return (
@@ -29,12 +58,20 @@ function App() {
           <Route path="/project" element={
             <div>
               <MenuBar/>
-                <Project/>
-                <Footer/>
+              <Project pjList={pjList}/>
+              <Footer/>
             </div>
-          }></Route>
-          <Route path="*" element={<div>404 not found</div>}></Route>
-        </Routes>
+          }>
+          </Route>
+        <Route path="/project/:id" element={
+          <div>
+            <MenuBar/>
+            <ProjecDetail pjList={pjList}/>
+            <Footer/>
+          </div>
+        } />
+        <Route path="*" element={<div>404 not found</div>}></Route>
+      </Routes>
       </div>
     </div>
   );
