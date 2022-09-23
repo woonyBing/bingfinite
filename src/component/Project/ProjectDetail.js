@@ -10,7 +10,7 @@ function ProjecDetail({pjList}) {
         <div className='detailWrap'>
             <div className="detailContainer">
                 <div className="detailThumb">
-                    <div className="detailThumbsM">
+                    <div className="detailThumbsMN">
                         <img src = {process.env.PUBLIC_URL + cardInfo.detailThumb[0]} />
                     </div>
                     <div className="detailThumbsP">
@@ -25,9 +25,9 @@ function ProjecDetail({pjList}) {
                 </div>
                 <div className="detailImg">
                     <div className="detailImgs">
-                        {/* <img src = {process.env.PUBLIC_URL + cardInfo.detailImgPath[0]} />
+                        <img src = {process.env.PUBLIC_URL + cardInfo.detailImgPath[0]} />
                         <img src = {process.env.PUBLIC_URL + cardInfo.detailImgPath[1]} />
-                        <img src = {process.env.PUBLIC_URL + cardInfo.detailImgPath[2]} /> */}
+                        <img src = {process.env.PUBLIC_URL + cardInfo.detailImgPath[2]} />
                     </div>
                 </div>
             </div>

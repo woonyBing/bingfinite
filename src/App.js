@@ -26,7 +26,7 @@ function App() {
         content : 'HTML, CSS, JAVA SCRIPT 연습을 위해 만든 미니게임 입니다',
         mainImgPath : '/images/pj_bearrun.png',
         detailThumb : ['경로1', '경로2'],
-        detailComment : '이 프로젝트에 대한 설명',
+        detailComment : '이 프로젝트에 대한 설명2',
         detailImgPath : ['경로1', '경로2', '경로3', '경로4']
     },
     {
