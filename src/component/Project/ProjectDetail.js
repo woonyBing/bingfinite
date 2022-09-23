@@ -2,20 +2,25 @@ import {useParams} from 'react-router-dom';
 
 function ProjecDetail({pjList}) {
     let {id} = useParams();
-    let cardInfo = pjList.find((pj) => {
-        return pj.id === id;
+    
+    let cardInfo = pjList.find((pj, i) => {
+        return (pj.id === id)
     });
 
+    // console.log(cardInfo.detailThumb.length)
+    
     return(
-        <div className='detailWrap'>
             <div className="detailContainer">
                 <div className="detailThumb">
                     <div className="detailThumbsMN">
+                        <img src = {process.env.PUBLIC_URL+cardInfo.detailThumb[0]} />
+                    </div>
+                    {/* <div className="detailThumbsMN">
                         <img src = {process.env.PUBLIC_URL + cardInfo.detailThumb[0]} />
                     </div>
                     <div className="detailThumbsP">
                         <img src = {process.env.PUBLIC_URL + cardInfo.detailThumb[1]} />
-                    </div>
+                    </div> */}
                 </div>
                 <div className="detailComment">
                     <h4>Comment</h4>
@@ -31,7 +36,6 @@ function ProjecDetail({pjList}) {
                     </div>
                 </div>
             </div>
-        </div>
     )
 }
 
