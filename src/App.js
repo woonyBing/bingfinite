@@ -29,11 +29,8 @@ function App() {
           <Route path="/project" element={
             <div>
               <MenuBar/>
-              <div style={{height:'auto', marginTop:'80px'}}>
-                <h3 style={{textAlign:'center'}}>Project</h3>
                 <Project/>
                 <Footer/>
-              </div>
             </div>
           }></Route>
           <Route path="*" element={<div>404 not found</div>}></Route>

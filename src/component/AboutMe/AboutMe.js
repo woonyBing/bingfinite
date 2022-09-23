@@ -11,10 +11,11 @@ function AboutMe() {
             <div className="AboutTop">
                 <h3>About Me</h3>
                 <div style={{color:'gray'}}>안녕하세요 신입 개발자 빙예은입니다</div>
-                <div className="abTab">Information</div>
-                <div className="abTab">Work Career</div>
-                <div className="abTab">Skill</div>
-                <div className="abTab">Contact</div>
+                {/* 누르면 각 분류별로 스크롤 내려가는 기능 넣기 */}
+                <div className="abTab" id="Information">Information</div>
+                <div className="abTab" id="WorkCareer">Work Career</div>
+                <div className="abTab" id="Skill">Skill</div>
+                <div className="abTab" id="Contact">Contact</div>
             </div>
             <div className="AboutBody">
                 <Information id="Information"/>
@@ -26,6 +27,7 @@ function AboutMe() {
                 <div>
                     <h5 className="contact">Contact</h5>
                     <div  className="contactContainer">
+                        {/* 누르면 메일, 전화번호, 카카오톡 복사되는 거 넣기 */}
                     <div className="contactButton">
                         <img src={process.env.PUBLIC_URL + 'images/email.png'}/>E-mail</div>
                     <div className="contactButton">
