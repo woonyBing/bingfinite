@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom"
+
 function Project({pjList}) {
 
     return(
@@ -18,9 +20,13 @@ function Project({pjList}) {
     )
 }
 
-function CardCollection({projectList, i}) {
+function CardCollection({projectList}) {
+    let navigate = useNavigate();
+
     return(
-        <div className="cardBox">
+        <div className="cardBox" onClick={()=>{
+            // console.log('/' + projectList.id)
+            navigate('/project/' + projectList.id)}}>
             <div className="cardImg">
                 <img src={process.env.PUBLIC_URL + projectList.imgPath} width='100%'/>
             </div>
