@@ -70,7 +70,17 @@ function App() {
           <Route path="/project" element={
             <div>
               <MenuBar/>
-              <Project pjList={pjList}/>
+              <div>
+                <h3 style={{textAlign:'center', marginTop:'80px'}}>Project</h3>
+                {
+                  pjList.map((projectList, i)=>{
+                    console.log(i)
+                    return(
+                      <Project key={projectList.id} projectList={projectList} i={i}/>
+                    )
+                  })
+                }
+              </div>
               <Footer/>
             </div>
           }>

@@ -1,19 +1,12 @@
 import { useNavigate } from "react-router-dom"
 
-function Project({pjList}) {
+function Project({projectList, i}) {
 
     return(
         <div>
-            <h3 style={{textAlign:'center', marginTop:'80px'}}>Project</h3>
             <div className="CardWrap">
                 <div className="CardContainer">
-                    {
-                        pjList.map((projectList, i)=>{
-                            return(
-                                <CardCollection key={projectList.id} projectList={projectList} i={i}/>
-                            )
-                        })
-                    }
+                    <CardCollection key={projectList.id} projectList={projectList}/>
                 </div>
             </div>
         </div>
