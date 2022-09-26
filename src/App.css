@@ -66,6 +66,11 @@
 .mainButtonTo {
   opacity: 1;
 }
+.mainBgColor {
+  background-color: rgb(73, 132, 232);
+  width: 90%;
+  /* opacity: 0.5; */
+}
 
 .CardWrap{
   padding: 60px;

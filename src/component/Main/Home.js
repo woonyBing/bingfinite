@@ -101,6 +101,7 @@ useEffect(()=>{
 
 let [showButtons, setShowButtons] = useState(false);
 let [mainButtonTo, setMainButtonTo] = useState('');
+let [mainBgColor, setMainBgColor] = useState('');
 useEffect(()=>{
     const buttonInterval = setTimeout(()=>{
     if (introCnt2 === intro2.length) {
@@ -120,14 +121,26 @@ useEffect(()=>{
 useEffect(()=>{
     const timer = setTimeout( ()=> {
         if(showButtons == true){
-        setMainButtonTo('mainButtonTo');
+            setMainButtonTo('mainButtonTo');
         }
     }, 300);
     
     return () => {
         clearTimeout(timer);
     }
-}, [showButtons])
+}, [showButtons]);
+
+// useEffect(()=>{
+//     const timer = setTimeout( ()=> {
+//         if(mainButtonTo != 0 ){
+//             setMainBgColor('mainBgColor');
+//         }
+//     }, 300);
+    
+//     return () => {
+//         clearTimeout(timer);
+//     }
+// });
 
 
 return(
@@ -158,8 +171,10 @@ return(
         {
             showButtons == true ?
             <div>
-            <div className={"mainButtonFrom " + mainButtonTo}   onClick={()=>{navigate('/aboutme')}}>About Me</div>
-            <div className={"mainButtonFrom " + mainButtonTo}  onClick={()=>{navigate('/project')}}>Project</div>
+                <div className={"mainButtonFrom " + mainButtonTo} onClick={()=>{
+                    navigate('/aboutme')
+                }}>About Me</div>
+                <div className={"mainButtonFrom " + mainButtonTo} onClick={()=>{navigate('/project')}}>Project</div>
             </div>
             : null
         }
