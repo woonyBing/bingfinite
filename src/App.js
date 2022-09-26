@@ -4,9 +4,9 @@ import { Navbar, Container, Nav, ProgressBar } from "react-bootstrap";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import AboutMe from "./component/AboutMe/AboutMe.js";
 import Project from "./component/Project/Project.js";
-import Skill from "./component/AboutMe/Skill";
 import { useState, useEffect } from "react";
 import ProjecDetail from './component/Project/ProjectDetail.js';
+import Home from './component/Main/Home.js';
 
 function App() {
   
@@ -105,68 +105,6 @@ function App() {
   );
 }
 
-
-function Home() {
-  let navigate = useNavigate();
-
-  let title = 'Bingfinite : ';
-  let [titleText, setTitleText] = useState('');
-  let [cnt, setCnt] = useState(0);
-  let [showExplan, setShowExplan] = useState(false);
-  let [showIntro, setShowIntro] = useState(false);
-
-  
-  useEffect(()=>{
-    let titleInterval = setInterval(()=>{
-      setTitleText(titleText + title[cnt]);
-      setCnt(cnt + 1);
-    }, 150)
-
-    if(cnt === title.length) {
-      clearInterval(titleInterval);
-
-      setInterval(()=>{
-        setShowExplan(true);
-      }, 500)
-    }
-    return ()=>{
-      clearInterval(titleInterval);
-    }
-  })
-
-  // useEffect(()=>{
-  //   const stopto = setTimeout(()=>{
-  //     setAlertShow(false)
-  //   }, 3000);
-  //   return (()=>{
-  //     clearTimeout(stopto)
-  //   })
-  // }, [])
-
-  // useEffect(()=>{
-  //   let 
-  // })
-
-
-  return(
-    <div className="Home">
-        <div className="title">{titleText}</div>
-          {
-            showExplan == true ? 
-              <div style={{color:'gray'}}>
-                Bing Ye Eun + Infinite
-              </div> : null
-          }
-        <br/>
-        <h4>성장 가능성이 무한한 신입 개발자,</h4>
-        <h4>안녕하세요 <b>빙예은</b>입니다.</h4>
-        <div>
-          <div className="mainButton" onClick={()=>{navigate('/aboutme')}}>About Me</div>
-          <div className="mainButton" onClick={()=>{navigate('/project')}}>Project</div>
-        </div>
-    </div>
-  )
-}
 
 function MenuBar() {
   let navigate = useNavigate();
