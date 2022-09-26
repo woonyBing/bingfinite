@@ -58,18 +58,19 @@
 }
 .CardContainer {
   height: auto;
-  margin-top : 20px;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   grid-template-rows: auto;
+  
 }
 .cardBox {
   margin-bottom: 30px;
   float: left;
   cursor: pointer;
+  
 }
 .cardImg > img {
   width: 100%;
@@ -120,7 +121,6 @@
   border-radius: 20px;
   box-shadow: 5px 5px 10px -10px rgb(8, 8, 36) ;
   position: absolute;
-  /* text-align: center; */
   right:0; bottom:0;
   transform: translate(30%, 20%);
   z-index: 1;
@@ -129,7 +129,6 @@
   align-items: center;
 }
 .detailThumbsP > img {
-  /* margin-top: 15px; */
   width: 85%;
   height: 85%;
   border: 1px solid rgb(196, 196, 196);

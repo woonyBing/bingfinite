@@ -72,14 +72,20 @@ function App() {
               <MenuBar/>
               <div>
                 <h3 style={{textAlign:'center', marginTop:'80px'}}>Project</h3>
-                {
-                  pjList.map((projectList, i)=>{
-                    console.log(i)
-                    return(
-                      <Project key={projectList.id} projectList={projectList} i={i}/>
-                    )
-                  })
-                }
+                  <div className="CardWrap">
+                    <div className="CardContainer">
+                      {
+                        pjList.map((projectList, i)=>{
+                          // console.log(i)
+                          return(
+                            
+                                <Project key={projectList.id} projectList={projectList} i={i}/>
+                          )
+                        })
+                      }
+                      
+                    </div>
+                  </div>
               </div>
               <Footer/>
             </div>
