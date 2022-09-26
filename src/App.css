@@ -282,6 +282,7 @@
   border: 1px solid rgb(229, 229, 229);
   color: rgb(180, 180, 180);
   border-radius: 20px;
+  margin-left: 10px;
   margin-right: 10px;
   display: flex;
   flex-direction: column;
