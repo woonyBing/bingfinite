@@ -108,10 +108,55 @@ function App() {
 
 function Home() {
   let navigate = useNavigate();
+
+  let title = 'Bingfinite : ';
+  let [titleText, setTitleText] = useState('');
+  let [cnt, setCnt] = useState(0);
+  let [showExplan, setShowExplan] = useState(false);
+  let [showIntro, setShowIntro] = useState(false);
+
+  
+  useEffect(()=>{
+    let titleInterval = setInterval(()=>{
+      setTitleText(titleText + title[cnt]);
+      setCnt(cnt + 1);
+    }, 150)
+
+    if(cnt === title.length) {
+      clearInterval(titleInterval);
+
+      setInterval(()=>{
+        setShowExplan(true);
+      }, 500)
+    }
+    return ()=>{
+      clearInterval(titleInterval);
+    }
+  })
+
+  // useEffect(()=>{
+  //   const stopto = setTimeout(()=>{
+  //     setAlertShow(false)
+  //   }, 3000);
+  //   return (()=>{
+  //     clearTimeout(stopto)
+  //   })
+  // }, [])
+
+  // useEffect(()=>{
+  //   let 
+  // })
+
+
   return(
     <div className="Home">
-        <h1 style={{color:'rgb(73, 132, 232)'}}>Bingfinite :</h1>
-        <p style={{color:'gray'}}>Bing Ye Eun + Infinite</p>
+        <div className="title">{titleText}</div>
+          {
+            showExplan == true ? 
+              <div style={{color:'gray'}}>
+                Bing Ye Eun + Infinite
+              </div> : null
+          }
         <br/>
         <h4>성장 가능성이 무한한 신입 개발자,</h4>
         <h4>안녕하세요 <b>빙예은</b>입니다.</h4>

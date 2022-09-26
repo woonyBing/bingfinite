@@ -35,6 +35,11 @@
   flex-direction: column;
   justify-content: center;
 }
+.title {
+  color:rgb(73, 132, 232);
+  font-size : 30pt;
+  font-weight: bold;
+}
 
 .mainButton {
   background-color: rgb(73, 132, 232);
