@@ -38,19 +38,19 @@ function AboutMe() {
                         document.getElementById('WorkCareer').scrollIntoView({behavior:'smooth'});
                     }}>Work Career</div>
                     <div className={"abTabInfoFrom3 " + abTabInfoTo3} onClick={()=>{
-                        navigate('/aboutme/#Skill')
                         setAbTabInfoTo3('abTabInfoTo3');
                         setAbTabInfoTo('');
                         setAbTabInfoTo2('');
                         setAbTabInfoTo4('');
+                        navigate('/aboutme/#Skill')
                         document.getElementById('Skill').scrollIntoView({behavior:'smooth'});
                     }}>Skill</div>
                     <div className={"abTabInfoFrom4 " + abTabInfoTo4} onClick={()=>{
-                        navigate('/aboutme/#Contact')
                         setAbTabInfoTo4('abTabInfoTo4');
                         setAbTabInfoTo('');
                         setAbTabInfoTo2('');
                         setAbTabInfoTo3('');
+                        navigate('/aboutme/#Contact')
                         document.getElementById('Contact').scrollIntoView({behavior:'smooth'});
                     }}>Contact</div>
                 </div>

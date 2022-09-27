@@ -189,30 +189,6 @@
 
 
 
-.Skill {
-  box-sizing : border-box;
-  margin-bottom: 100px;
-  height: auto;
-}
-.SkillTitle {
-  color: rgb(73, 132, 232);
-  margin-top: 80px;
-  margin-left: 10%;
-}
-.skillType {
-  margin-top: 40px;
-}
-.skillIcon {
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10%;
-  margin-right: 15px;
-  float: left;
-}
-
-
 
 .Footer {
   background-color: rgb(73, 132, 232);
@@ -306,10 +282,35 @@
   padding-top: 80px;
   padding-bottom: 80px;
 }
-.career {
-  background-color: white;
+
+
+.Skill {
+  box-sizing : border-box;
+  /* margin-bottom: 100px; */
+  height: auto;
+}
+.SkillTitle {
+  color: rgb(73, 132, 232);
   margin-top: 80px;
-  margin-bottom: 80px;
+  margin-left: 10%;
+}
+.skillType {
+  margin-top: 40px;
+}
+.skillIcon {
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 15px;
+  float: left;
+}
+
+.career {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: white;
 }
 .careerTable{
   width: 80%;
@@ -317,15 +318,18 @@
   margin:auto;
 }
 
-.contactContainer {
-  display: flex;
-  justify-content: center;
+.contactContainer{
+  padding-top: 150px;
+  padding-bottom: 100px;
 }
-
 .contact{
   color:rgb(73, 132, 232);
   margin-bottom: 30px;
   background-color: white;
+}
+.contactBox {
+  display: flex;
+  justify-content: center;
 }
 .contactButton{
   width: 230px;
