@@ -35,7 +35,9 @@ function AboutMe() {
 
 
     let [abTabActiveIndex, setAbTabActiveIndex] = useState(-1);
-    
+    let [abTabKeepIndex, setAbTabKeepIndex] = useState(-1);
+
+    //버튼 효과 추가
     function isAbTabInfoTo(index){
         if(index == abTabActiveIndex) {
             return 'abTabInfoTo';
@@ -44,13 +46,26 @@ function AboutMe() {
         }
     }
 
-    console.log(window.location.pathname == '/aboutme/' + id)
 
+    // useEffect(()=>{
+    //     console.log(document.getElementsByClassName('abTabInfoFrom'))
+    //     if(window.location.pathname == '/aboutme/' + id){
+    //         document.getElementsByClassName('abTabInfoFrom').className = 'abTabInfoTo'
+    //     }
+    // }, [window.location.pathname])
+
+    // console.log(window.location.pathname == '/aboutme/' + id);
+    // useEffect(()=>{
+    //     if(window.location.pathname == '/aboutme/' + id){
+
+    //     }
+    // }, [window.location.pathname])
     
+    // 도메인이 /abouteme일 때 버튼 스타일 빼기
     useEffect(()=>{
         if(window.location.pathname == '/aboutme'){
             setAbTabActiveIndex(-1);
-        }        
+        }
     }, [window.location.pathname])
 
     return(
@@ -65,8 +80,8 @@ function AboutMe() {
                         tabList.map((tab, i)=>{
                             return(
                                 <div key={tab.id} className={"abTabInfoFrom " + isAbTabInfoTo(i)} onClick={()=>{
+                                    setAbTabActiveIndex(i)
                                     navigate('/aboutme/' + tab.id);
-                                    setAbTabActiveIndex(i);
                                     document.getElementById(tab.id).scrollIntoView({behavior:'smooth'});
                                 }}>
                                     {tab.name}
