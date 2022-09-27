@@ -14,21 +14,27 @@ function CardCollection({projectList}) {
     let navigate = useNavigate();
     let [cardBoxTo, setCardBoxTo] = useState('');
 
-    useEffect(()=>{
-        const cardUpTimer = setTimeout(()=>{
-            setCardBoxTo('cardBoxTo');
-        }, 200)
-
-        return ()=>{
-            clearTimeout(cardUpTimer);
-        }
-    }, [window.location.pathname])
-
     // useEffect(()=>{
-    //     if(window.location.pathname == '/project'){
-    //         setAbTabActiveIndex(-1);
+    //     const cardUpTimer = setTimeout(()=>{
+    //         setCardBoxTo('cardBoxTo');
+    //     }, 150)
+
+    //     return ()=>{
+    //         clearTimeout(cardUpTimer);
     //     }
     // }, [window.location.pathname])
+
+    useEffect(()=>{
+        if(window.location.pathname == '/project'){
+            const cardUpTimer = setTimeout(()=>{
+                setCardBoxTo('cardBoxTo');
+            }, 150)
+    
+            return ()=>{
+                clearTimeout(cardUpTimer);
+            }
+        }
+    }, [window.location.pathname])
 
     return(
         <div className={"cardBox "  +cardBoxTo} onClick={()=>{
