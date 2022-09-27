@@ -143,10 +143,14 @@ function Footer(){
         <div style={{color:'white'}}>Bing Ye Eun + Infinite</div>
       </div>
       <div className="ftSns">
-        <div className="ftSnsInsta">
+        <div className="ftSnsInsta" onClick={()=>{
+          window.open('https://www.instagram.com/')
+        }}>
         <img src={process.env.PUBLIC_URL + "/images/icon_insta.png"} width="25px"/>
         </div>
-        <div className="ftSnsTalk">
+        <div className="ftSnsTalk" onClick={()=>{
+          window.open('https://open.kakao.com/o/sqpvBcEe')
+        }}>
         <img src={process.env.PUBLIC_URL + "/images/icon_kakao.png"} width="25px"/>
         </div>
       </div>

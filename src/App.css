@@ -219,26 +219,27 @@
   margin-bottom: 10px;
   cursor: pointer;
 }
-.ftSnsTalk{
-  background-color: white;
-  width:40px;
-  height:40px;
-  border-radius: 10px;
-  float:right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 5px;
-}
 .ftSnsInsta {
   background-color: white;
   width:40px;
   height: 40px;
   border-radius: 10px;
-  float: right;
+  float: left;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 5px;
+}
+.ftSnsTalk{
+  background-color: white;
+  width:40px;
+  height:40px;
+  border-radius: 10px;
+  float:left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
 }
 
 .ftCopyright{
