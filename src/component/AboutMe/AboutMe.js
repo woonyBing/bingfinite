@@ -32,10 +32,26 @@ function AboutMe() {
             name : 'Contact'
         }        
     ]);
-    let [abTabInfoTo, setAbTabInfoTo] = useState('');
-    // let [tabButton, setTabButton] = useState(false);
-    
 
+
+    let [abTabActiveIndex, setAbTabActiveIndex] = useState(-1);
+    
+    function isAbTabInfoTo(index){
+        if(index == abTabActiveIndex) {
+            return 'abTabInfoTo';
+        } else {
+            return '';
+        }
+    }
+
+    console.log(window.location.pathname == '/aboutme/' + id)
+
+    
+    useEffect(()=>{
+        if(window.location.pathname == '/aboutme'){
+            setAbTabActiveIndex(-1);
+        }        
+    }, [window.location.pathname])
 
     return(
         <div>
@@ -48,8 +64,9 @@ function AboutMe() {
                     {
                         tabList.map((tab, i)=>{
                             return(
-                                <div className={"abTabInfoFrom " + abTabInfoTo} onClick={()=>{
+                                <div key={tab.id} className={"abTabInfoFrom " + isAbTabInfoTo(i)} onClick={()=>{
                                     navigate('/aboutme/' + tab.id);
+                                    setAbTabActiveIndex(i);
                                     document.getElementById(tab.id).scrollIntoView({behavior:'smooth'});
                                 }}>
                                     {tab.name}
