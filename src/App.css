@@ -66,10 +66,26 @@
 .mainButtonTo {
   opacity: 1;
 }
-.mainBgColor {
-  background-color: rgb(73, 132, 232);
-  width: 90%;
-  /* opacity: 0.5; */
+.mainButtonFrom:hover {
+  background-color: rgb(59, 112, 203);
+}
+.buttonBorderFrom {
+  outline: 8px solid rgb(212, 227, 255);
+  opacity: 0.5;
+  transition-property: opacity;
+  transition-duration: 1s;
+}
+.buttonBorderTo {
+  opacity: 1;
+}
+.buttonBorderFrom2 {
+  outline: 8px solid rgb(212, 227, 255);
+  opacity: 0.5;
+  transition-property: opacity;
+  transition-duration: 1s;
+}
+.buttonBorderTo2 {
+  opacity: 1;
 }
 
 .CardWrap{
@@ -110,7 +126,6 @@
   display: grid;
   place-items: center;
   grid-gap: 50px;
-  /* grid-template-columns: 1fr; */
   grid-template-rows: auto;
   overflow: hidden;
   width: 100%;

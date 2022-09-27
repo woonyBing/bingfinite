@@ -3,8 +3,11 @@ import {useNavigate} from 'react-router-dom'
 
 
 function Home() {
+
+//내비게이트
 let navigate = useNavigate();
 
+// 로고 타이핑 효과
 let title = ' Bingfinite : ';
 let [titleText, setTitleText] = useState('');
 let [cnt, setCnt] = useState(0);
@@ -28,6 +31,7 @@ useEffect(()=>{
     }
 })
 
+//로고 설명 타이핑 효과
 let intro = ' 성장 가능성이 무한한 신입 개발자,'
 let [introText, setIntroText] = useState('');
 let [introCnt, setIntroCnt] = useState(0);
@@ -51,7 +55,7 @@ useEffect(()=>{
     return ()=>{clearInterval(introInterval);}
 })
 
-
+//이름 타이핑 효과 + 스타일 적용
 let intName = ' 빙예은'
 let [introName, setIntroName] = useState('');
 let [nameCnt, setNameCnt] = useState(0);
@@ -75,6 +79,7 @@ useEffect(()=>{
     return ()=>{clearInterval(introNameInterval);}
 })
 
+//로고 설명 타이핑 효과 2
 let intro2 = '입니다.'
 let [introText2, setIntroText2] = useState('');
 let [introCnt2, setIntroCnt2] = useState(0);
@@ -98,10 +103,9 @@ useEffect(()=>{
 })
 
 
-
+//버튼 보여지는 효과
 let [showButtons, setShowButtons] = useState(false);
 let [mainButtonTo, setMainButtonTo] = useState('');
-let [mainBgColor, setMainBgColor] = useState('');
 useEffect(()=>{
     const buttonInterval = setTimeout(()=>{
     if (introCnt2 === intro2.length) {
@@ -130,17 +134,36 @@ useEffect(()=>{
     }
 }, [showButtons]);
 
-// useEffect(()=>{
-//     const timer = setTimeout( ()=> {
-//         if(mainButtonTo != 0 ){
-//             setMainBgColor('mainBgColor');
-//         }
-//     }, 300);
-    
-//     return () => {
-//         clearTimeout(timer);
-//     }
-// });
+
+// 버튼 눌렀을 때 효과 주기
+let [buttonBorderFrom, setButtonBorderFrom] = useState('');
+let [buttonBorderTo, setButtonBorderTo] = useState('');
+let [buttonBorderFrom2, setButtonBorderFrom2] = useState('');
+let [buttonBorderTo2, setButtonBorderTo2] = useState('');
+
+// console.log(buttonBorderFrom.length)
+useEffect(()=>{
+    const timer = setTimeout(()=>{
+        if(buttonBorderFrom != 0) {
+            setButtonBorderTo(' buttonBorderTo');
+        }
+    }, 150);
+    return () => {
+        clearTimeout(timer);
+    }
+}, [buttonBorderFrom]);
+
+useEffect(()=>{
+    const timer = setTimeout(()=>{
+        if(buttonBorderFrom2 != 0) {
+            setButtonBorderTo2(' buttonBorderTo2');
+        }
+    }, 150);
+    return () => {
+        clearTimeout(timer);
+    }
+}, [buttonBorderFrom2]);
+
 
 
 return(
@@ -171,14 +194,19 @@ return(
         {
             showButtons == true ?
             <div>
-                <div className={"mainButtonFrom " + mainButtonTo} onClick={()=>{
-                    navigate('/aboutme')
+                <div className={"mainButtonFrom " + mainButtonTo + buttonBorderFrom + buttonBorderTo} onClick={()=>{
+                    setButtonBorderFrom(' buttonBorderFrom');
+                    setTimeout(()=>{
+                        navigate('/aboutme');}, 500);
                 }}>About Me</div>
-                <div className={"mainButtonFrom " + mainButtonTo} onClick={()=>{navigate('/project')}}>Project</div>
+                <div className={"mainButtonFrom " + mainButtonTo + buttonBorderFrom2 + buttonBorderTo2} onClick={()=>{
+                    setButtonBorderFrom2(' buttonBorderFrom2');
+                    setTimeout(()=>{
+                    navigate('/project');}, 500);
+                }}>Project</div>
             </div>
             : null
         }
-        
     </div>
 )
 }
