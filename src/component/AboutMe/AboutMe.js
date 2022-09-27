@@ -2,19 +2,41 @@ import Information from "./Information.js";
 import Skill from "./Skill.js";
 import Career from "./Career.js";
 import Contact from "./Contact.js";
-import {useNavigate} from "react-router-dom"
-import {useState} from 'react';
+import {useNavigate, useParams} from "react-router-dom"
+import {useEffect, useState} from 'react';
 
 function AboutMe() {
     let navigate = useNavigate();
+    let {id} = useParams();
     
+    // let [abTabInfoTo, setAbTabInfoTo] = useState('');
+    // let [abTabInfoTo2, setAbTabInfoTo2] = useState('');
+    // let [abTabInfoTo3, setAbTabInfoTo3] = useState('');
+    // let [abTabInfoTo4, setAbTabInfoTo4] = useState('');
+    
+    let [tabList, setTabList] = useState([
+        {
+            id : 'Information',
+            name : 'Information'
+        },
+        {
+            id : 'WorkCareer',
+            name : 'Work Career'
+        },
+        {
+            id : 'Skill',
+            name : 'Skill'
+        },
+        {
+            id : 'Contact',
+            name : 'Contact'
+        }        
+    ]);
     let [abTabInfoTo, setAbTabInfoTo] = useState('');
-    let [abTabInfoTo2, setAbTabInfoTo2] = useState('');
-    let [abTabInfoTo3, setAbTabInfoTo3] = useState('');
-    let [abTabInfoTo4, setAbTabInfoTo4] = useState('');
+    // let [tabButton, setTabButton] = useState(false);
     
 
-    
+
     return(
         <div>
 
@@ -23,6 +45,27 @@ function AboutMe() {
                     <h3>About Me</h3>
                     <div style={{color:'gray'}}>안녕하세요 신입 개발자 빙예은입니다</div>
                     {/* 누르면 각 분류별로 스크롤 내려가는 기능 넣기 */}
+                    {
+                        tabList.map((tab, i)=>{
+                            return(
+                                <div className={"abTabInfoFrom " + abTabInfoTo} onClick={()=>{
+                                    navigate('/aboutme/' + tab.id);
+                                    document.getElementById(tab.id).scrollIntoView({behavior:'smooth'});
+                                }}>
+                                    {tab.name}
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            </div>
+
+
+            {/* 
+            <div className="AboutHeader">
+                <div className="AboutTop">
+                    <h3>About Me</h3>
+                    <div style={{color:'gray'}}>안녕하세요 신입 개발자 빙예은입니다</div>
                     <div className={"abTabInfoFrom " + abTabInfoTo} onClick={()=>{
                         setAbTabInfoTo('abTabInfoTo');
                         setAbTabInfoTo2('');
@@ -57,6 +100,9 @@ function AboutMe() {
                     }}>Contact</div>
                 </div>
             </div>
+             */}
+
+
             
             <div className="AboutBody">
                 <div>

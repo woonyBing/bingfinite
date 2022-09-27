@@ -71,13 +71,13 @@ function App() {
               <Footer/>
             </div>
           }></Route>
-          {/* <Route path="/aboutme/:id" element={
+          <Route path="/aboutme/:id" element={
             <div>
               <MenuBar/>
               <AboutMe/>
               <Footer/>
             </div>
-          } /> */}
+          } />
           <Route path="/project" element={
             <div>
               <MenuBar/>
