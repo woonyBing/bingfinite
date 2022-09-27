@@ -14,20 +14,20 @@ let [cnt, setCnt] = useState(0);
 let [showExplan, setShowExplan] = useState(false);
 
 useEffect(()=>{
-    const titleInterval = setInterval(()=>{
+    const titleTimeout = setTimeout(()=>{
     setTitleText(titleText + title[cnt]);
     setCnt(cnt + 1);
     }, 50)
 
     if(cnt === title.length) {
-    clearInterval(titleInterval);
+    clearTimeout(titleTimeout);
 
-    setInterval(()=>{
+    setTimeout(()=>{
         setShowExplan(true); 
     }, 100)
     }
     return ()=>{
-    clearInterval(titleInterval);
+        clearTimeout(titleTimeout);
     }
 })
 
@@ -38,9 +38,9 @@ let [introCnt, setIntroCnt] = useState(0);
 let [showIntro, setShowIntro] = useState(false);
 
 useEffect(()=>{
-    const introInterval = setInterval(()=>{
+    const introTimeout = setTimeout(()=>{
         if(showExplan == true){
-        setInterval(()=>{
+            setTimeout(()=>{
             setShowIntro(true);
         }, 100)
 
@@ -50,9 +50,9 @@ useEffect(()=>{
     }, 50)
 
     if(introCnt === intro.length) {
-        clearInterval(introInterval);
+        clearTimeout(introTimeout);
     }
-    return ()=>{clearInterval(introInterval);}
+    return ()=>{clearTimeout(introTimeout);}
 })
 
 //이름 타이핑 효과 + 스타일 적용
@@ -61,10 +61,9 @@ let [introName, setIntroName] = useState('');
 let [nameCnt, setNameCnt] = useState(0);
 let [showName, setShowName] = useState(false);
 useEffect(()=>{
-    const introNameInterval = setInterval(()=>{
+    const introNameTimeout = setTimeout(()=>{
         if(introCnt === intro.length){
-        
-        setInterval(()=>{
+            setTimeout(()=>{
             setShowName(true);
         }, 50)
 
@@ -74,9 +73,9 @@ useEffect(()=>{
     }, 50)
 
     if(nameCnt === intName.length) {
-        clearInterval(introNameInterval);
+        clearTimeout(introNameTimeout);
     }
-    return ()=>{clearInterval(introNameInterval);}
+    return ()=>{clearTimeout(introNameTimeout);}
 })
 
 //로고 설명 타이핑 효과 2
@@ -85,9 +84,9 @@ let [introText2, setIntroText2] = useState('');
 let [introCnt2, setIntroCnt2] = useState(0);
 let [showIntro2, setShowIntro2] = useState(false);
 useEffect(()=>{
-    const introInterval2 = setInterval(()=>{
+    const introTimeout2 = setTimeout(()=>{
         if(nameCnt === intName.length){
-        setInterval(()=>{
+            setTimeout(()=>{
             setShowIntro2(true);
         }, 100)
 
@@ -97,9 +96,9 @@ useEffect(()=>{
     }, 50)
 
     if(introCnt2 === intro2.length) {
-        clearInterval(introInterval2);
+        clearTimeout(introTimeout2);
     }
-    return ()=>{clearInterval(introInterval2);}
+    return ()=>{clearTimeout(introTimeout2);}
 })
 
 

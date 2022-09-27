@@ -48,6 +48,8 @@ function Skill() {
 ])
     return(
         <div>
+            <div className="Skill" style={{backgroundColor:'rgb(248, 248, 248)', paddingTop:'80px', paddingBottom:'80px'}}>
+                <h5 style={{color:'rgb(73, 132, 232)'}}>Skill</h5>
             {
                 skList.map((skillList, i)=>{
                     return(
@@ -55,6 +57,8 @@ function Skill() {
                     )
                 })
             }
+            
+            </div>
         </div>
     )
 }
