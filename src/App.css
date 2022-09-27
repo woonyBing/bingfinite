@@ -97,7 +97,7 @@
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 40px;
   grid-template-rows: auto;
   
 }
@@ -105,7 +105,18 @@
   margin-bottom: 30px;
   float: left;
   cursor: pointer;
+  transform: translateY(100px);
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 0.5s;
   
+}
+.cardBoxTo {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.cardBox:hover{
+  transform: translateY(-30px);
 }
 .cardImg > img {
   width: 100%;
@@ -243,10 +254,7 @@
   text-align: center;
   margin-top: 80px;
 }
-.abTabInfoFrom,
-.abTabInfoFrom2,
-.abTabInfoFrom3,
-.abTabInfoFrom4 {
+.abTabInfoFrom {
   width: 120px;
   height: 35px;
   font-size: 16px;
@@ -258,17 +266,11 @@
   margin: 10px;
   cursor: pointer;
 }
-.abTabInfoFrom:hover,
-.abTabInfoFrom2:hover,
-.abTabInfoFrom3:hover,
-.abTabInfoFrom4:hover{
+.abTabInfoFrom:hover{
   background-color: rgb(73, 132, 232);
   color: white;
 }
-.abTabInfoTo,
-.abTabInfoTo2,
-.abTabInfoTo3,
-.abTabInfoTo4 {
+.abTabInfoTo{
   background-color: rgb(73, 132, 232);
   color: white;
 }
@@ -351,3 +353,4 @@
   width: 40px;
   clear: both;
 }
+

@@ -1,4 +1,5 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from 'react';
 
 function Project({projectList, i}) {
 
@@ -11,9 +12,26 @@ function Project({projectList, i}) {
 
 function CardCollection({projectList}) {
     let navigate = useNavigate();
+    let [cardBoxTo, setCardBoxTo] = useState('');
+
+    useEffect(()=>{
+        const cardUpTimer = setTimeout(()=>{
+            setCardBoxTo('cardBoxTo');
+        }, 200)
+
+        return ()=>{
+            clearTimeout(cardUpTimer);
+        }
+    }, [window.location.pathname])
+
+    // useEffect(()=>{
+    //     if(window.location.pathname == '/project'){
+    //         setAbTabActiveIndex(-1);
+    //     }
+    // }, [window.location.pathname])
 
     return(
-        <div className="cardBox" onClick={()=>{
+        <div className={"cardBox "  +cardBoxTo} onClick={()=>{
             // console.log('/' + projectList.id)
             navigate('/project/' + projectList.id)}}>
             <div className="cardImg">

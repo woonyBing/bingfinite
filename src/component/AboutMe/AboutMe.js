@@ -35,7 +35,6 @@ function AboutMe() {
 
 
     let [abTabActiveIndex, setAbTabActiveIndex] = useState(-1);
-    let [abTabKeepIndex, setAbTabKeepIndex] = useState(-1);
 
     //버튼 효과 추가
     function isAbTabInfoTo(index){
