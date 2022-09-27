@@ -269,7 +269,10 @@
 .AboutTop{
   margin-top: 80px;
 }
-.abTab{
+.abTabInfoFrom,
+.abTabInfoFrom2,
+.abTabInfoFrom3,
+.abTabInfoFrom4 {
   width: 120px;
   height: 35px;
   font-size: 16px;
@@ -280,6 +283,20 @@
   display: inline-block;
   margin: 10px;
   cursor: pointer;
+}
+.abTabInfoFrom:hover,
+.abTabInfoFrom2:hover,
+.abTabInfoFrom3:hover,
+.abTabInfoFrom4:hover{
+  background-color: rgb(73, 132, 232);
+  color: white;
+}
+.abTabInfoTo,
+.abTabInfoTo2,
+.abTabInfoTo3,
+.abTabInfoTo4 {
+  background-color: rgb(73, 132, 232);
+  color: white;
 }
 .AboutBody{
   clear: both;

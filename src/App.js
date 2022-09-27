@@ -78,7 +78,6 @@ function App() {
                         pjList.map((projectList, i)=>{
                           // console.log(i)
                           return(
-                            
                                 <Project key={projectList.id} projectList={projectList} i={i}/>
                           )
                         })
