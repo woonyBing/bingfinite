@@ -13,7 +13,7 @@ function Information() {
             <div style={{marginTop:'20px'}}>
                 <Container>
                     <Card style={{ width: '70%', margin: "0 auto" }}>
-                        <Card.Img variant="top" src={process.env.PUBLIC_URL + "images/yeeun-1.jpg"} />
+                        <Card.Img variant="top" src={process.env.PUBLIC_URL + "/images/yeeun-1.jpg"} />
                         <Card.Body>
                             <Card.Title>빙예은(氷藝殷)</Card.Title>
                             <ListGroup.Item>Bing Ye Eun</ListGroup.Item>
@@ -23,8 +23,8 @@ function Information() {
                             <ListGroup.Item>010-2024-8903</ListGroup.Item>
                         </ListGroup>
                         <Card.Body>
-                            <Card.Link href="https://blog.naver.com/honeybye" target='_blank'>Blog</Card.Link>
-                            <Card.Link href="#" target='_blank'>Instagram</Card.Link>
+                            <Card.Link href="https://section.blog.naver.com/BlogHome.naver?directoryNo=0&currentPage=1&groupId=0" target='_blank'>Blog</Card.Link>
+                            <Card.Link href="https://www.instagram.com/" target='_blank'>Instagram</Card.Link>
                         </Card.Body>
                     </Card>
                 </Container>

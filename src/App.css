@@ -265,8 +265,6 @@
 
 .AboutHeader {
   text-align: center;
-}
-.AboutTop{
   margin-top: 80px;
 }
 .abTabInfoFrom,
@@ -301,6 +299,7 @@
 .AboutBody{
   clear: both;
   margin-top: 60px;
+  text-align: center;
 }
 .info {
   background-color: rgb(248, 248, 248);
@@ -308,6 +307,7 @@
   padding-bottom: 80px;
 }
 .career {
+  background-color: white;
   margin-top: 80px;
   margin-bottom: 80px;
 }
@@ -325,6 +325,7 @@
 .contact{
   color:rgb(73, 132, 232);
   margin-bottom: 30px;
+  background-color: white;
 }
 .contactButton{
   width: 230px;

@@ -7,6 +7,10 @@ import Project from "./component/Project/Project.js";
 import { useState, useEffect } from "react";
 import ProjecDetail from './component/Project/ProjectDetail.js';
 import Home from './component/Main/Home.js';
+// import Information from "./component/AboutMe/Information.js";
+// import Skill from "./component/AboutMe/Skill.js";
+// import Career from "./component/AboutMe/Career.js";
+// import Contact from "./component/AboutMe/Contact.js";
 
 function App() {
   
@@ -67,6 +71,13 @@ function App() {
               <Footer/>
             </div>
           }></Route>
+          {/* <Route path="/aboutme/:id" element={
+            <div>
+              <MenuBar/>
+              <AboutMe/>
+              <Footer/>
+            </div>
+          } /> */}
           <Route path="/project" element={
             <div>
               <MenuBar/>
