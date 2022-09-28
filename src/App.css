@@ -88,6 +88,10 @@
   opacity: 1;
 }
 
+.card {
+  width: 70%;
+  margin: 0 auto
+}
 .CardWrap{
   padding: 60px;
 }
@@ -355,3 +359,22 @@
   clear: both;
 }
 
+@media (max-width:600px) {
+  .card {
+    width: 90%;
+  }
+  .ftSnsInsta, .ftSnsTalk{
+    width:35px;
+    height: 35px;
+    border-radius: 10px;
+  }
+  .careerTable {
+    width: 90%;
+    font-size: 11px;
+  }
+}
+
+/* contact 아이콘 작아지게 */
+@media (max-width:500px) {
+
+}
