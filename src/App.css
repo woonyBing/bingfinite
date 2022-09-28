@@ -6,6 +6,10 @@
   
 }
 
+body {
+  min-width: 400px;
+}
+
 
 #navbarLogo{
   color:rgb(73, 132, 232);
@@ -100,7 +104,7 @@
   margin-bottom: 20px;
   display: grid;
   place-items: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 40px;
   grid-template-rows: auto;
   
@@ -124,7 +128,7 @@
 }
 .cardImg > img {
   width: 100%;
-  height: 400px;
+  height: 100%;
   box-shadow: 5px 5px 10px -10px rgb(8, 8, 36) ;
   object-fit:cover;
 
@@ -142,52 +146,39 @@
   place-items: center;
   grid-gap: 50px;
   grid-template-rows: auto;
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 100%;
 }
-.detailThumb {
+.detailExamWrap {
   margin-top: 100px;
   height: auto;
-  position: relative;
 }
-.detailThumbsMN{
-  width: 800px;
-  background-color: rgb(248, 248, 248);
-  border-radius: 20px;
+.detailExample {
+  width:100%;
+  text-align: center;
+}
+.detailExamImgMoniter > img {
+  width:60%;
+  border-radius: 15px;
+  border: 30px solid rgb(248, 248, 248);
   box-shadow: 5px 5px 10px -10px rgb(8, 8, 36) ;
-  position: relative;
-  z-index: 0;
 }
-.detailThumbsMN > img {
-  margin : 25px;
-  width:750px;
-  border: 1px solid rgb(196, 196, 196);
-}
-.detailThumbsP {
-  width: 170px;
-  height: 300px;
-  background-color: rgb(240, 240, 240);
-  border-radius: 20px;
+.detailExamImgPhone > img {
+  width:13%;
+  border-radius: 15px;
+  border: 15px solid rgb(240, 240, 240);
   box-shadow: 5px 5px 10px -10px rgb(8, 8, 36) ;
   position: absolute;
-  right:0; bottom:0;
-  transform: translate(30%, 20%);
-  z-index: 1;
+  right:15%; top:55%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.detailThumbsP > img {
-  width: 85%;
-  height: 85%;
-  border: 1px solid rgb(196, 196, 196);
 } 
 
 .detailComment {
   text-align: center;
   margin-top: 100px;
 }
-
 .detailImgs {
   display: grid;
   place-items: center;
@@ -359,22 +350,111 @@
   clear: both;
 }
 
-@media (max-width:600px) {
+
+@media (max-width:1120px) {
+  .detailExamImgMoniter > img {
+    width:60%;
+  }
+  .detailExamImgPhone > img {
+    right:15%; top:50%;
+  }
+}
+
+@media (max-width:1050px) {
+  .detailExamImgMoniter > img {
+    width:70%;
+  }
+  .detailExamImgPhone > img {
+    width:18%;
+    right:10%; top:50%;
+  }
+}
+
+@media (max-width:1050px) {
+  /* .detailExamImgMoniter > img {
+    width:70%;
+    border-radius: 10px;
+    border: 30px solid rgb(248, 248, 248);
+    box-shadow: 5px 5px 10px -10px rgb(8, 8, 36) ;
+  }
+  .detailExamImgPhone > img {
+    width:18%;
+    right:10%; top:50%;
+  } */
+}
+@media (max-width:800px) {
   .card {
     width: 90%;
   }
+  .CardWrap{
+    padding: 60px;
+  }
+  .CardContainer {
+    grid-template-columns: 1fr 1fr;
+    
+  }
+  .abTabInfoFrom {
+    width: 50%;
+  }
+  .detailExamImgMoniter > img {
+    width:75%;
+    border: 20px solid rgb(248, 248, 248);
+  }
+  .detailExamImgPhone > img {
+    width:17%;
+    right:5%; top:47%;
+    border: 10px solid rgb(240, 240, 240);
+  }
+}
+
+@media (max-width:680px) {
+  .detailExamImgPhone > img {
+    width:17%;
+    right:5%; top:45%;
+  }
+}
+
+
+/* contact 아이콘 작아지게 */
+@media (max-width:600px) {
+  .CardWrap{
+    padding: 30px;
+  }
+  .CardContainer {
+    grid-template-columns: 1fr;
+  }
+  .detailExamImgPhone > img {
+    width:18%;
+    right:5%; top:42%;
+  }
+}
+
+@media (max-width:550px) {
+  .detailExamImgMoniter > img {
+    width:80%;
+    border: 18px solid rgb(248, 248, 248);
+  }
+  .detailExamImgPhone > img {
+    width:18%;
+    right:5%; top:40%;
+    border-radius: 10px;
+  }
+}
+
+/* contact 아이콘 작아지게 */
+@media (max-width:400px) {
   .ftSnsInsta, .ftSnsTalk{
     width:35px;
     height: 35px;
     border-radius: 10px;
   }
-  .careerTable {
-    width: 90%;
-    font-size: 11px;
+  .detailExamImgMoniter > img {
+    width:80%;
+    border: 18px solid rgb(248, 248, 248);
   }
-}
-
-/* contact 아이콘 작아지게 */
-@media (max-width:500px) {
-
+  .detailExamImgPhone > img {
+    width:18%;
+    right:5%; top:40%;
+    border-radius: 10px;
+  }
 }

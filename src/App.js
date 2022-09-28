@@ -19,7 +19,7 @@ function App() {
         id : 'pj001',
         name : 'Bingfinite',
         content : '포트폴리오를 한눈에 볼 수 있도록 제작한 개인 사이트입니다',
-        mainImgPath : '/images/pj_bingfinite.png',
+        mainImgPath : '/images/project_thumb_bingfinite.jpg',
         detailThumb : ['/images/bingfinite_main.jpg', '/images/bingfinite_m.jpg'],
         detailComment : '이 프로젝트에 대한 설명',
         detailImgPath : ['/images/bingfinite_main.jpg', '/images/bingfinite_aboutme.jpg', '/images/bingfinite_project.jpg']
@@ -28,7 +28,7 @@ function App() {
         id : 'pj002',
         name : 'Bear Run',
         content : 'HTML, CSS, JAVA SCRIPT 연습을 위해 만든 미니게임 입니다',
-        mainImgPath : '/images/pj_bearrun.png',
+        mainImgPath : '/images/project_thumb_sample.jpg',
         detailThumb : ['경로1', '경로2'],
         detailComment : '이 프로젝트에 대한 설명2',
         detailImgPath : ['경로1', '경로2', '경로3', '경로4']
@@ -37,7 +37,7 @@ function App() {
         id : 'pj003',
         name : 'Todo List',
         content : '강의 중 진행한 TodoList를 클론코딩 했습니다',
-        mainImgPath : '',
+        mainImgPath : '/images/project_thumb_sample.jpg',
         detailThumb : ['경로1', '경로2'],
         detailComment : '이 프로젝트에 대한 설명',
         detailImgPath : ['경로1', '경로2', '경로3', '경로4']
@@ -46,7 +46,7 @@ function App() {
         id : 'pj004',
         name : 'Market',
         content : '강의 중 진행한 Market 클론코딩 했습니다',
-        mainImgPath : '',
+        mainImgPath : '/images/project_thumb_sample.jpg',
         detailThumb : ['경로1', '경로2'],
         detailComment : '이 프로젝트에 대한 설명',
         detailImgPath : ['경로1', '경로2', '경로3', '경로4']

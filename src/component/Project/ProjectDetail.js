@@ -9,12 +9,14 @@ function ProjecDetail({pjList}) {
 
     return(
             <div className="detailContainer">
-                <div className="detailThumb">
-                    <div className="detailThumbsMN">
-                        <img src = {process.env.PUBLIC_URL + cardInfo.detailThumb[0]} />
-                    </div>
-                    <div className="detailThumbsP">
-                        <img src = {process.env.PUBLIC_URL + cardInfo.detailThumb[1]} />
+                <div className="detailExamWrap">
+                    <div className='detailExample'>
+                        <div className="detailExamImgMoniter">
+                            <img src = {process.env.PUBLIC_URL + cardInfo.detailThumb[0]} />
+                        </div>
+                        <div className="detailExamImgPhone">
+                            <img src = {process.env.PUBLIC_URL + cardInfo.detailThumb[1]} />
+                        </div>
                     </div>
                 </div>
                 <div className="detailComment">
