@@ -4,7 +4,6 @@ import Career from "./Career.js";
 import Contact from "./Contact.js";
 import {useNavigate, useParams} from "react-router-dom"
 import {useEffect, useState} from 'react';
-import { Tab } from "react-bootstrap";
 
 function AboutMe() {
     let navigate = useNavigate();
@@ -41,16 +40,8 @@ function AboutMe() {
             return '';
         }
     }
-
-
-    // useEffect(()=>{
-    //     console.log(document.getElementsByClassName('abTabInfoFrom'))
-    //     if(window.location.pathname == '/aboutme/' + id){
-    //         document.getElementsByClassName('abTabInfoFrom')[0].className = 'abTabInfoTo'
-    //     }
-    // }, [window.location.pathname])
-
     
+    // let [abTabInfoTo, setAbTabInfoTo] = useState('')
     // url 경로 id 동일한 애 찾아서 
     // console.log(window.location.pathname == '/aboutme/' + id);
     useEffect(()=>{
@@ -58,11 +49,10 @@ function AboutMe() {
             tabList.find((list, i)=>{
                 // console.log(i)
                 if(list.id == id) {
-                    setAbTabActiveIndex(i)
+                    setAbTabActiveIndex(i);
                 }
             })
         }
-        
     }, [window.location.pathname])
     
     
@@ -85,7 +75,6 @@ function AboutMe() {
                         tabList.map((tab, i)=>{
                             return(
                                 <div key={tab.id} className={"abTabInfoFrom " + isAbTabInfoTo(i)} onClick={()=>{
-                                    setAbTabActiveIndex(i)
                                     navigate('/aboutme/' + tab.id);
                                     document.getElementById(tab.id).scrollIntoView({behavior:'smooth'});
                                 }}>

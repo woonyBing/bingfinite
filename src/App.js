@@ -125,7 +125,9 @@ function MenuBar() {
           <Navbar.Brand id="navbarLogo" href="/">Bingfinite</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link className="navbarCategory" onClick={()=>{navigate('/')}}>Home</Nav.Link>
-            <Nav.Link className="navbarCategory" onClick={()=>{navigate('/aboutme')}}>About Me</Nav.Link>
+            <Nav.Link className="navbarCategory" onClick={()=>{
+              navigate('/aboutme')
+              }}>About Me</Nav.Link>
             <Nav.Link className="navbarCategory" onClick={()=>{navigate('/project')}}>Project</Nav.Link>
           </Nav>
         </Container>

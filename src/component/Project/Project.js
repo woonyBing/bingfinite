@@ -14,16 +14,6 @@ function CardCollection({projectList}) {
     let navigate = useNavigate();
     let [cardBoxTo, setCardBoxTo] = useState('');
 
-    // useEffect(()=>{
-    //     const cardUpTimer = setTimeout(()=>{
-    //         setCardBoxTo('cardBoxTo');
-    //     }, 150)
-
-    //     return ()=>{
-    //         clearTimeout(cardUpTimer);
-    //     }
-    // }, [window.location.pathname])
-
     useEffect(()=>{
         if(window.location.pathname == '/project'){
             const cardUpTimer = setTimeout(()=>{
