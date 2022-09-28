@@ -10,6 +10,9 @@ function Project({projectList, i}) {
     )
 }
 
+
+
+
 function CardCollection({projectList}) {
     let navigate = useNavigate();
     let [cardBoxTo, setCardBoxTo] = useState('');

@@ -94,13 +94,13 @@ body {
 
 .card {
   width: 70%;
-  margin: 0 auto
+  margin: 0 auto;
 }
 .CardWrap{
   padding: 60px;
 }
 .CardContainer {
-  height: auto;
+  /* height: auto; */
   margin-bottom: 20px;
   display: grid;
   place-items: center;
@@ -350,8 +350,29 @@ body {
   clear: both;
 }
 
+.btnGoTop {
+  width:40px;
+  height: 40px;
+  background-color: rgb(73, 132, 232);
+  border-radius: 100%;
+  display: flex;
+  justify-content : center;
+  align-items : center;
+  position:fixed;
+  bottom:35px;
+  right:30px;
+  z-index:99;
+}
+.btnGoTop:hover {
+  background-color: rgb(59, 112, 203);
+  cursor : pointer;
+}
+.btnGoTop > img {
+  width: 25px;
+}
 
-.skipTyping {
+/* 스킵 버튼 스타일 */
+/* .skipTyping {
   position: absolute;
   bottom:30px;
   opacity: 0.5;
@@ -359,7 +380,7 @@ body {
 .skipTyping:hover {
   cursor: pointer;
   opacity: 1;
-}
+} */
 
 
 @media (max-width:1120px) {
@@ -381,18 +402,6 @@ body {
   }
 }
 
-@media (max-width:1050px) {
-  /* .detailExamImgMoniter > img {
-    width:70%;
-    border-radius: 10px;
-    border: 30px solid rgb(248, 248, 248);
-    box-shadow: 5px 5px 10px -10px rgb(8, 8, 36) ;
-  }
-  .detailExamImgPhone > img {
-    width:18%;
-    right:10%; top:50%;
-  } */
-}
 @media (max-width:800px) {
   .card {
     width: 90%;

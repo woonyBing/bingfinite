@@ -97,8 +97,15 @@ function App() {
                     </div>
                   </div>
               </div>
+              
+              <div id="btnTop" className="btnGoTop" onClick={()=>{
+                console.log('상단으로 가는 기능 넣기')
+              }}>
+                  <img src={process.env.PUBLIC_URL + '/images/goTop.png'} />
+              </div>
               <Footer/>
             </div>
+            
           }>
           </Route>
         <Route path="/project/:id" element={
