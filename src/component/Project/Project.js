@@ -34,7 +34,7 @@ function CardCollection({projectList}) {
                 clearTimeout(cardUpTimer);
             }
         }
-    }, [window.location.pathname])
+    })
 
     return(
         <div className={"cardBox "  +cardBoxTo} onClick={()=>{

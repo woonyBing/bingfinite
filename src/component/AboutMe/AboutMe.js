@@ -4,15 +4,12 @@ import Career from "./Career.js";
 import Contact from "./Contact.js";
 import {useNavigate, useParams} from "react-router-dom"
 import {useEffect, useState} from 'react';
+import { Tab } from "react-bootstrap";
 
 function AboutMe() {
     let navigate = useNavigate();
     let {id} = useParams();
-    
-    // let [abTabInfoTo, setAbTabInfoTo] = useState('');
-    // let [abTabInfoTo2, setAbTabInfoTo2] = useState('');
-    // let [abTabInfoTo3, setAbTabInfoTo3] = useState('');
-    // let [abTabInfoTo4, setAbTabInfoTo4] = useState('');
+
     
     let [tabList, setTabList] = useState([
         {
@@ -49,16 +46,25 @@ function AboutMe() {
     // useEffect(()=>{
     //     console.log(document.getElementsByClassName('abTabInfoFrom'))
     //     if(window.location.pathname == '/aboutme/' + id){
-    //         document.getElementsByClassName('abTabInfoFrom').className = 'abTabInfoTo'
+    //         document.getElementsByClassName('abTabInfoFrom')[0].className = 'abTabInfoTo'
     //     }
     // }, [window.location.pathname])
 
+    
+    // url 경로 id 동일한 애 찾아서 
     // console.log(window.location.pathname == '/aboutme/' + id);
-    // useEffect(()=>{
-    //     if(window.location.pathname == '/aboutme/' + id){
-
-    //     }
-    // }, [window.location.pathname])
+    useEffect(()=>{
+        if(window.location.pathname == '/aboutme/' + id){
+            tabList.find((list, i)=>{
+                // console.log(i)
+                if(list.id == id) {
+                    setAbTabActiveIndex(i)
+                }
+            })
+        }
+        
+    }, [window.location.pathname])
+    
     
     // 도메인이 /abouteme일 때 버튼 스타일 빼기
     useEffect(()=>{
