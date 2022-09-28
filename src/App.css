@@ -351,6 +351,17 @@ body {
 }
 
 
+.skipTyping {
+  position: absolute;
+  bottom:30px;
+  opacity: 0.5;
+}
+.skipTyping:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+
 @media (max-width:1120px) {
   .detailExamImgMoniter > img {
     width:60%;
@@ -441,7 +452,6 @@ body {
   }
 }
 
-/* contact 아이콘 작아지게 */
 @media (max-width:400px) {
   .ftSnsInsta, .ftSnsTalk{
     width:35px;
@@ -456,5 +466,9 @@ body {
     width:18%;
     right:5%; top:40%;
     border-radius: 10px;
+  }
+  .mainButtonFrom {
+    margin-right: 5px;
+    margin-left: 5px;
   }
 }

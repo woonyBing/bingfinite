@@ -4,8 +4,21 @@ import {useNavigate} from 'react-router-dom'
 
 function Home() {
 
+
+
+
+
+
+
+
+
+    
+
 //내비게이트
 let navigate = useNavigate();
+//스킵 버튼 보이게 or 안보이게
+let [showSkip, setShowSkip] = useState(false);
+
 
 // 로고 타이핑 효과
 let title = ' Bingfinite : ';
@@ -15,16 +28,16 @@ let [showExplan, setShowExplan] = useState(false);
 
 useEffect(()=>{
     const titleTimeout = setTimeout(()=>{
-    setTitleText(titleText + title[cnt]);
-    setCnt(cnt + 1);
+        setTitleText(titleText + title[cnt]);
+        setCnt(cnt + 1);
     }, 50)
 
     if(cnt === title.length) {
-    clearTimeout(titleTimeout);
+        clearTimeout(titleTimeout);
 
-    setTimeout(()=>{
-        setShowExplan(true); 
-    }, 100)
+        setTimeout(()=>{
+            setShowExplan(true); 
+        }, 100)
     }
     return ()=>{
         clearTimeout(titleTimeout);
@@ -41,11 +54,11 @@ useEffect(()=>{
     const introTimeout = setTimeout(()=>{
         if(showExplan == true){
             setTimeout(()=>{
-            setShowIntro(true);
-        }, 100)
+                setShowIntro(true);
+            }, 100)
 
-        setIntroText(introText + intro[introCnt]);
-        setIntroCnt(introCnt+1);
+            setIntroText(introText + intro[introCnt]);
+            setIntroCnt(introCnt+1);
         }
     }, 50)
 
@@ -64,11 +77,11 @@ useEffect(()=>{
     const introNameTimeout = setTimeout(()=>{
         if(introCnt === intro.length){
             setTimeout(()=>{
-            setShowName(true);
-        }, 50)
+                setShowName(true);
+            }, 50)
 
-        setIntroName(introName + intName[nameCnt]);
-        setNameCnt(nameCnt + 1);
+            setIntroName(introName + intName[nameCnt]);
+            setNameCnt(nameCnt + 1);
         }
     }, 50)
 
@@ -87,11 +100,11 @@ useEffect(()=>{
     const introTimeout2 = setTimeout(()=>{
         if(nameCnt === intName.length){
             setTimeout(()=>{
-            setShowIntro2(true);
-        }, 100)
+                setShowIntro2(true);
+            }, 100)
 
-        setIntroText2(introText2 + intro2[introCnt2]);
-        setIntroCnt2(introCnt2 + 1);
+            setIntroText2(introText2 + intro2[introCnt2]);
+            setIntroCnt2(introCnt2 + 1);
         }
     }, 50)
 
@@ -106,17 +119,17 @@ useEffect(()=>{
 let [showButtons, setShowButtons] = useState(false);
 let [mainButtonTo, setMainButtonTo] = useState('');
 useEffect(()=>{
-    const buttonInterval = setTimeout(()=>{
+    const buttonTimeout = setTimeout(()=>{
     if (introCnt2 === intro2.length) {
         setTimeout(()=>{
-        setShowButtons(true);
+            setShowButtons(true);
         }, 400)
     }
     if (showButtons === true) {
-        clearTimeout(buttonInterval);
+        clearTimeout(buttonTimeout);
     }
     return ()=>{
-        clearTimeout(buttonInterval);
+        clearTimeout(buttonTimeout);
     }
     })
 })
@@ -164,9 +177,20 @@ useEffect(()=>{
 }, [buttonBorderFrom2]);
 
 
+// // skip 버튼 만들어보기
+// useEffect(()=>{
+//     const skip = setTimeout(()=>{
+//         if (showIntro == true) {
+//             setShowSkip(true);
+//         }
+//     }, 100);
+//     return ()=>{
+//         clearTimeout(skip)
+//     }
+// }, [showIntro])
 
 return(
-    <div className="Home">
+    <div className="Home" id="canvas">
         <div className="title">{titleText}</div>
         {
             showExplan == true ? 
@@ -206,6 +230,13 @@ return(
             </div>
             : null
         }
+        {/* {
+            showSkip == true ?
+                <div className='skipTyping' onClick={()=>{
+                    // clearTimeout(skip)
+                }}>skip</div>
+                :null
+        } */}
     </div>
 )
 }
