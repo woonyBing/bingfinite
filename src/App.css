@@ -391,6 +391,9 @@ body {
     width:18%;
     right:10%; top:50%;
   }
+  .detailImgs >img {
+    width: 100%;
+  }
 }
 
 @media (max-width:800px) {
