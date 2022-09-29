@@ -18,7 +18,7 @@ function CardCollection({projectList}) {
     let [cardBoxTo, setCardBoxTo] = useState('');
 
     useEffect(()=>{
-        if(window.location.pathname == '/project'){
+        if(window.location.pathname == process.env.PUBLIC_URL + '/project'){
             const cardUpTimer = setTimeout(()=>{
                 setCardBoxTo('cardBoxTo');
             }, 150)
