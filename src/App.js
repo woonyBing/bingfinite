@@ -129,7 +129,7 @@ function MenuBar() {
     <div className="Header">
       <Navbar className="navbar">
         <Container>
-          <Navbar.Brand id="navbarLogo" href="/">Bingfinite</Navbar.Brand>
+          <Navbar.Brand id="navbarLogo" href={process.env.PUBLIC_URL + "/"}>Bingfinite</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link className="navbarCategory" onClick={()=>{navigate('/')}}>Home</Nav.Link>
             <Nav.Link className="navbarCategory" onClick={()=>{
