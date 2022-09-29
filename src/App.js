@@ -20,7 +20,7 @@ function App() {
         name : 'Gilfinite',
         content : '포트폴리오를 한눈에 볼 수 있도록 제작한 개인 사이트입니다',
         mainImgPath : '/images/project_thumb_gil.jpg',
-        detailThumb : ['/images/pj_gil_intro.png', '/images/bingfinite_m.jpg'],
+        detailThumb : ['/images/pj_gil_intro.png', '/images/pj_gil_mm.jpg'],
         detailComment : 'HTML, CSS, JAVASCRIPT, REACT를 활용한 개인 프로젝트입니다. \n 진행했던 프로젝트와 자기소개를 한 눈에 확인할 수 있는 사이트입니다.',
         detailImgPath : ['/images/pj_gil_intro.png', '/images/pj_gil-1.png', '/images/pj_gil-2.png', '/images/pj_gil-3.png']
     },
