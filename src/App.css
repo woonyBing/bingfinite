@@ -141,6 +141,10 @@ body {
 }
 
 
+
+.enter {
+  white-space : pre-wrap;
+}
 .detailContainer {
   display: grid;
   place-items: center;

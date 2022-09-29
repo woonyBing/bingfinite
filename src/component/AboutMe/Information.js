@@ -13,14 +13,14 @@ function Information() {
             <div style={{marginTop:'20px'}}>
                 <Container>
                     <Card className='card'>
-                        <Card.Img variant="top" src={process.env.PUBLIC_URL + "/images/yeeun-1.jpg"} />
+                        <Card.Img variant="top" src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80" />
                         <Card.Body>
-                            <Card.Title>빙예은(氷藝殷)</Card.Title>
-                            <ListGroup.Item>Bing Ye Eun</ListGroup.Item>
+                            <Card.Title>홍 길 동</Card.Title>
+                            <ListGroup.Item>Hong Gil Dong</ListGroup.Item>
                         </Card.Body>
                         <ListGroup className="list-group-flush">
-                            <ListGroup.Item>1995.01.05</ListGroup.Item>
-                            <ListGroup.Item>010-2024-8903</ListGroup.Item>
+                            <ListGroup.Item>1983.04.05</ListGroup.Item>
+                            <ListGroup.Item>010-1234-5678</ListGroup.Item>
                         </ListGroup>
                         <Card.Body>
                             <Card.Link href="https://section.blog.naver.com/BlogHome.naver?directoryNo=0&currentPage=1&groupId=0" target='_blank'>Blog</Card.Link>

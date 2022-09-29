@@ -73,7 +73,7 @@ function AboutMe() {
             <div className="AboutHeader">
                 <div className="AboutTop">
                     <h3>About Me</h3>
-                    <div style={{color:'gray'}}>안녕하세요 신입 개발자 빙예은입니다</div>
+                    <div style={{color:'gray'}}>안녕하세요 신입 개발자 홍길동입니다</div>
                     {/* 누르면 각 분류별로 스크롤 내려가는 기능 넣기 */}
                     {
                         tabList.map((tab, i)=>{

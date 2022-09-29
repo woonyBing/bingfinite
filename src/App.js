@@ -17,39 +17,84 @@ function App() {
   let [pjList, setpjList] = useState([
     {
         id : 'pj001',
-        name : 'Bingfinite',
+        name : 'Gilfinite',
         content : '포트폴리오를 한눈에 볼 수 있도록 제작한 개인 사이트입니다',
-        mainImgPath : '/images/project_thumb_bingfinite.jpg',
-        detailThumb : ['/images/bingfinite_main.jpg', '/images/bingfinite_m.jpg'],
-        detailComment : '이 프로젝트에 대한 설명',
-        detailImgPath : ['/images/bingfinite_main.jpg', '/images/bingfinite_aboutme.jpg', '/images/bingfinite_project.jpg']
+        mainImgPath : '/images/project_thumb_gil.jpg',
+        detailThumb : ['/images/pj_gil_intro.png', '/images/bingfinite_m.jpg'],
+        detailComment : 'HTML, CSS, JAVASCRIPT, REACT를 활용한 개인 프로젝트입니다. \n 진행했던 프로젝트와 자기소개를 한 눈에 확인할 수 있는 사이트입니다.',
+        detailImgPath : ['/images/pj_gil_intro.png', '/images/pj_gil-1.png', '/images/pj_gil-2.png', '/images/pj_gil-3.png']
     },
     {
         id : 'pj002',
-        name : 'Bear Run',
-        content : 'HTML, CSS, JAVA SCRIPT 연습을 위해 만든 미니게임 입니다',
+        name : 'Sample',
+        content : 'Sample(프로젝트에 대한 간단한 설명 들어갈 자리입니다)',
         mainImgPath : '/images/project_thumb_sample.jpg',
-        detailThumb : ['경로1', '경로2'],
-        detailComment : '이 프로젝트에 대한 설명2',
-        detailImgPath : ['경로1', '경로2', '경로3', '경로4']
+        detailThumb : ['/images/pj_gil_sample.jpg', '/images/pj_gil_m.jpg'],
+        detailComment : '이 프로젝트에 대한 설명',
+        detailImgPath : ['/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg']
     },
     {
         id : 'pj003',
-        name : 'Todo List',
-        content : '강의 중 진행한 TodoList를 클론코딩 했습니다',
+        name : 'Sample2',
+        content : 'Sample(프로젝트에 대한 간단한 설명 들어갈 자리입니다)',
         mainImgPath : '/images/project_thumb_sample.jpg',
-        detailThumb : ['경로1', '경로2'],
+        detailThumb : ['/images/pj_gil_sample.jpg', '/images/pj_gil_m.jpg'],
         detailComment : '이 프로젝트에 대한 설명',
-        detailImgPath : ['경로1', '경로2', '경로3', '경로4']
+        detailImgPath : ['/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg']
     },
     {
         id : 'pj004',
-        name : 'Market',
-        content : '강의 중 진행한 Market 클론코딩 했습니다',
+        name : 'Sample4',
+        content : 'Sample(프로젝트에 대한 간단한 설명 들어갈 자리입니다)',
         mainImgPath : '/images/project_thumb_sample.jpg',
-        detailThumb : ['경로1', '경로2'],
+        detailThumb : ['/images/pj_gil_sample.jpg', '/images/pj_gil_m.jpg'],
         detailComment : '이 프로젝트에 대한 설명',
-        detailImgPath : ['경로1', '경로2', '경로3', '경로4']
+        detailImgPath : ['/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg']
+    },
+    {
+        id : 'pj005',
+        name : 'Sample5',
+        content : 'Sample(프로젝트에 대한 간단한 설명 들어갈 자리입니다)',
+        mainImgPath : '/images/project_thumb_sample.jpg',
+        detailThumb : ['/images/pj_gil_sample.jpg', '/images/pj_gil_m.jpg'],
+        detailComment : '이 프로젝트에 대한 설명',
+        detailImgPath : ['/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg']
+    },
+    {
+        id : 'pj006',
+        name : 'Sample6',
+        content : 'Sample(프로젝트에 대한 간단한 설명 들어갈 자리입니다)',
+        mainImgPath : '/images/project_thumb_sample.jpg',
+        detailThumb : ['/images/pj_gil_sample.jpg', '/images/pj_gil_m.jpg'],
+        detailComment : '이 프로젝트에 대한 설명',
+        detailImgPath : ['/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg']
+    },
+    {
+        id : 'pj007',
+        name : 'Sample7',
+        content : 'Sample(프로젝트에 대한 간단한 설명 들어갈 자리입니다)',
+        mainImgPath : '/images/project_thumb_sample.jpg',
+        detailThumb : ['/images/pj_gil_sample.jpg', '/images/pj_gil_m.jpg'],
+        detailComment : '이 프로젝트에 대한 설명',
+        detailImgPath : ['/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg']
+    },
+    {
+        id : 'pj008',
+        name : 'Sample8',
+        content : 'Sample(프로젝트에 대한 간단한 설명 들어갈 자리입니다)',
+        mainImgPath : '/images/project_thumb_sample.jpg',
+        detailThumb : ['/images/pj_gil_sample.jpg', '/images/pj_gil_m.jpg'],
+        detailComment : '이 프로젝트에 대한 설명',
+        detailImgPath : ['/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg']
+    },
+    {
+        id : 'pj009',
+        name : 'Sample9',
+        content : 'Sample(프로젝트에 대한 간단한 설명 들어갈 자리입니다)',
+        mainImgPath : '/images/project_thumb_sample.jpg',
+        detailThumb : ['/images/pj_gil_sample.jpg', '/images/pj_gil_m.jpg'],
+        detailComment : '이 프로젝트에 대한 설명',
+        detailImgPath : ['/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg','/images/pj_gil_sample.jpg']
     },
   ]);
 
@@ -179,7 +224,7 @@ function MenuBar() {
     <div className="Header">
       <Navbar className="navbar">
         <Container>
-          <Navbar.Brand id="navbarLogo" href={process.env.PUBLIC_URL + "/"}>Bingfinite</Navbar.Brand>
+          <Navbar.Brand id="navbarLogo" href={process.env.PUBLIC_URL + "/"}>Gilfinite</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link className="navbarCategory" onClick={()=>{navigate('/')}}>Home</Nav.Link>
             <Nav.Link className="navbarCategory" onClick={()=>{
@@ -198,8 +243,8 @@ function Footer(){
   return(
     <div className="Footer">
       <div className="ftLogo">
-        <h3>Bingfinite :</h3>
-        <div style={{color:'white'}}>Bing Ye Eun + Infinite</div>
+        <h3>Gilfinite :</h3>
+        <div style={{color:'white'}}>Hong Gil Dong + Infinite</div>
       </div>
       <div className="ftSns">
         <div className="ftSnsInsta" onClick={()=>{
@@ -214,7 +259,7 @@ function Footer(){
         </div>
       </div>
       <div className="ftCopyright">
-      Copyright 2022. Bing Ye Eun. All rights reserved.
+      Copyright 2022. Hong Gil Dong. All rights reserved.
       </div>
     </div>
   )

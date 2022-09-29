@@ -21,7 +21,7 @@ function ProjecDetail({pjList}) {
                 </div>
                 <div className="detailComment">
                     <h4>Comment</h4>
-                    <div>
+                    <div className='enter'>
                         {cardInfo.detailComment}
                     </div>
                 </div>
@@ -30,6 +30,7 @@ function ProjecDetail({pjList}) {
                         <img src = {process.env.PUBLIC_URL + cardInfo.detailImgPath[0]} />
                         <img src = {process.env.PUBLIC_URL + cardInfo.detailImgPath[1]} />
                         <img src = {process.env.PUBLIC_URL + cardInfo.detailImgPath[2]} />
+                        <img src = {process.env.PUBLIC_URL + cardInfo.detailImgPath[3]} />
                     </div>
                 </div>
             </div>
