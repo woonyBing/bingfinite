@@ -432,6 +432,9 @@ body {
     width:17%;
     right:5%; top:45%;
   }
+  .careerTable {
+    font-size: 14px;
+  }
 }
 
 
@@ -459,6 +462,9 @@ body {
     right:5%; top:40%;
     border-radius: 10px;
   }
+  .careerTable {
+    font-size: 12px;
+  }
 }
 
 @media (max-width:400px) {
@@ -479,5 +485,8 @@ body {
   .mainButtonFrom {
     margin-right: 5px;
     margin-left: 5px;
+  }
+  .careerTable {
+    font-size: 10px;
   }
 }
