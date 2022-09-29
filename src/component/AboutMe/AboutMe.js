@@ -41,15 +41,17 @@ function AboutMe() {
         }
     }
     
-    // let [abTabInfoTo, setAbTabInfoTo] = useState('')
-    // url 경로 id 동일한 애 찾아서 
+    // // 탭 선택 후 버튼 컬러 변경
     // console.log(window.location.pathname == '/aboutme/' + id);
+    // console.log(window.location.pathname == process.env.PUBLIC_URL + '/aboutme/' + id)
     useEffect(()=>{
-        if(window.location.pathname == '/aboutme/' + id){
+        if(window.location.pathname == process.env.PUBLIC_URL + '/aboutme/' + id){
             tabList.find((list, i)=>{
                 // console.log(i)
                 if(list.id == id) {
                     setAbTabActiveIndex(i);
+                    console.log(i);
+                    console.log(isAbTabInfoTo(i));
                 }
             })
         }
@@ -58,7 +60,7 @@ function AboutMe() {
     
     // 도메인이 /abouteme일 때 버튼 스타일 빼기
     useEffect(()=>{
-        if(window.location.pathname == '/aboutme'){
+        if(window.location.pathname == process.env.PUBLIC_URL + '/aboutme/'){
             setAbTabActiveIndex(-1);
         }
     }, [window.location.pathname])
