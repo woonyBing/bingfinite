@@ -6,8 +6,6 @@ function Home() {
 
 //내비게이트
 let navigate = useNavigate();
-//스킵 버튼 보이게 or 안보이게
-let [showSkip, setShowSkip] = useState(false);
 
 
 // 로고 타이핑 효과
@@ -167,17 +165,6 @@ useEffect(()=>{
 }, [buttonBorderFrom2]);
 
 
-// // skip 버튼 만들어보기
-// useEffect(()=>{
-//     const skip = setTimeout(()=>{
-//         if (showIntro == true) {
-//             setShowSkip(true);
-//         }
-//     }, 100);
-//     return ()=>{
-//         clearTimeout(skip)
-//     }
-// }, [showIntro])
 
 return(
     <div className="Home" id="canvas">
@@ -220,13 +207,6 @@ return(
             </div>
             : null
         }
-        {/* {
-            showSkip == true ?
-                <div className='skipTyping' onClick={()=>{
-                    // clearTimeout(skip)
-                }}>skip</div>
-                :null
-        } */}
     </div>
 )
 }

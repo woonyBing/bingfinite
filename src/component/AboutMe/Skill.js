@@ -41,7 +41,7 @@ function Skill() {
     },
     {
         id:'sk007',
-        name:'PHTHOSHOP',
+        name:'PHOTOSHOP',
         ability : 100,
         imgPath : "https://cdn-icons-png.flaticon.com/512/552/552220.png"
     }
