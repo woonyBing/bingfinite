@@ -16,7 +16,7 @@ function Project({projectList, i}) {
 function CardCollection({projectList}) {
     let navigate = useNavigate();
     let [cardBoxTo, setCardBoxTo] = useState('');
-
+    
     useEffect(()=>{
         if(window.location.pathname == process.env.PUBLIC_URL + '/project'){
             const cardUpTimer = setTimeout(()=>{
@@ -28,6 +28,7 @@ function CardCollection({projectList}) {
             }
         }
     })
+
 
     return(
         <div className={"cardBox "  +cardBoxTo} onClick={()=>{

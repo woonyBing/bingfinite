@@ -53,8 +53,19 @@ function App() {
     },
   ]);
 
-  let navigate = useNavigate();
+  
+  let [showTopButton, setShowTopButton] = useState(false);
 
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 200 || window.pageYOffset > 200){
+      setShowTopButton(true);
+    }
+    else {
+      setShowTopButton(false);
+    }
+  })
+
+  
   return (
     <div>
       <div className="mainBody">
@@ -69,6 +80,18 @@ function App() {
               <MenuBar/>
               <AboutMe/>
               <Footer/>
+              {
+                showTopButton == true ?
+                
+                <div id="btnTop" className="btnGoTop" onClick={()=>{
+                  // console.log('상단으로 가는 기능 넣기')
+                  document.body.scrollIntoView({behavior:'smooth'});
+                }}>
+                    <img src={process.env.PUBLIC_URL + '/images/goTop.png'} />
+                </div>
+                :null
+              }
+            
             </div>
           }></Route>
           <Route path="/aboutme/:id" element={
@@ -76,6 +99,17 @@ function App() {
               <MenuBar/>
               <AboutMe/>
               <Footer/>
+              {
+                showTopButton == true ?
+                
+                <div id="btnTop" className="btnGoTop" onClick={()=>{
+                  // console.log('상단으로 가는 기능 넣기')
+                  document.body.scrollIntoView({behavior:'smooth'});
+                }}>
+                    <img src={process.env.PUBLIC_URL + '/images/goTop.png'} />
+                </div>
+                :null
+              }
             </div>
           } />
           <Route path="/project" element={
@@ -97,12 +131,17 @@ function App() {
                     </div>
                   </div>
               </div>
-              
-              <div id="btnTop" className="btnGoTop" onClick={()=>{
-                console.log('상단으로 가는 기능 넣기')
-              }}>
-                  <img src={process.env.PUBLIC_URL + '/images/goTop.png'} />
-              </div>
+              {
+                showTopButton == true ?
+                
+                <div id="btnTop" className="btnGoTop" onClick={()=>{
+                  // console.log('상단으로 가는 기능 넣기')
+                  document.body.scrollIntoView({behavior:'smooth'});
+                }}>
+                    <img src={process.env.PUBLIC_URL + '/images/goTop.png'} />
+                </div>
+                :null
+              }
               <Footer/>
             </div>
             
@@ -113,6 +152,17 @@ function App() {
             <MenuBar/>
             <ProjecDetail pjList={pjList}/>
             <Footer/>
+            {
+                showTopButton == true ?
+                
+                <div id="btnTop" className="btnGoTop" onClick={()=>{
+                  // console.log('상단으로 가는 기능 넣기')
+                  document.body.scrollIntoView({behavior:'smooth'});
+                }}>
+                    <img src={process.env.PUBLIC_URL + '/images/goTop.png'} />
+                </div>
+                :null
+              }
           </div>
         } />
         <Route path="*" element={<div>404 not found</div>}></Route>

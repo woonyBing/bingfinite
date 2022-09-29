@@ -65,6 +65,8 @@ function AboutMe() {
         }
     }, [window.location.pathname])
 
+
+    
     return(
         <div>
 
